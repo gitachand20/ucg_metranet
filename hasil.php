@@ -21,7 +21,7 @@
 		echo '<tr><td>Tanggal Pengajuan Pinjaman</td><td>:</td><td>'.$_POST['days_registration1'].'</td></tr>';
 		echo '</table>';
 
-		header("Location: form_input_debitur.php?id=1");
+		header("Location: cermati.php?id=1");
 	} 
 
 	if (isset($_POST['sign_in'])) {

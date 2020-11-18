@@ -20,6 +20,9 @@
       </a>
     </div>
     <div class="modal-body" style="background-color: #DCDCDC;">
+      <div class="col-12" style="text-align: right;">
+        <span style="color: #FF0000; font-weight: bold; font-size: 11pt;">Semua data harus diisi</span>
+      </div>
       <div class="form-group row">
         <label class="col-4 col-form-label labelku">Nominal Pinjaman</label>
         <div class="col-8">
@@ -31,8 +34,8 @@
       </div>
       <div class="form-group row">
         <label class="col-4 col-form-label labelku">Precentase Scoring</label>
-        <div class="col-8">
-          <input class="form-control" type="text" onkeypress="return hanyaAngka(event)" onchange="handleChange(this)" name="ext_score_2" id="ext_score_2" required maxlength="3">
+        <div class="col-8" id="number">
+          <input class="form-control" type="number" name="ext_score_2" id="ext_score_2" required min="0.01" step="0.01" onchange="handleChange(this)">
           <div class="invalid-feedback">
             Presentase scoring tidak boleh kosong.
           </div>
@@ -77,7 +80,7 @@
             <option value="" disabled="disabled" selected="selected">Choose option</option>
             <option value="Higher education">Higher education</option>
             <option value="Incomplete higher">Incomplete higher</option>
-            <option value="Lower secondary">2Lower secondary"</option>
+            <option value="Lower secondary">Lower secondary</option>
             <option value="Secondary / secondary special">Secondary / secondary special</option>
           </select>
           <div class="invalid-feedback">
@@ -113,8 +116,8 @@
           <select class="form-control" name="family_status" id="family_status" required>
             <option value="" disabled="disabled" selected="selected">Choose option</option>
             <option value="Married">Married</option>
-            <option value="Civil Marriage">Civil Marriage</option>
-            <option value="Single / Not Married">Single / Not Married</option>
+            <option value="Civil marriage">Civil marriage</option>
+            <option value="Single / not married">Single / not married</option>
             <option value="Widow">Widow</option>
           </select>
           <div class="invalid-feedback">
@@ -129,7 +132,7 @@
             <option value="" disabled="disabled" selected="selected">Choose option</option>
             <option value="NA1">NA1</option>
             <option value="Medicine">Medicine</option>
-            <option value="Industry Type 5">Industry Type 5</option>
+            <option value="Industry: type 5">Industry: type 5</option>
             <option value="Construction">Construction</option>
             <option value="Business Entity Type 3">Business Entity Type 3</option>
             <option value="University">University</option>
@@ -144,9 +147,9 @@
         <div class="col-8">
           <select class="form-control" name="income_type" id="income_type" required>
             <option value="" disabled="disabled" selected="selected">Choose option</option>
-            <option value="Commercial Associate">Commercial Associate</option>
+            <option value="Commercial associate">Commercial associate</option>
             <option value="Working">Working</option>
-            <option value="State Servant">State Servant</option>
+            <option value="State servant">State servant</option>
             <option value="Pensioner">Pensioner</option>
           </select>
           <div class="invalid-feedback">
@@ -177,8 +180,8 @@
         <div class="col-8">
           <select class="form-control" name="contract_type" id="contract_type" required>
             <option value="" disabled="disabled" selected="selected">Choose option</option>
-            <option value="Cash Loans">Cash Loans</option>
-            <option value="Revolving Loans">Revolving Loans</option>
+            <option value="Cash loans">Cash loans</option>
+            <option value="Revolving loans">Revolving loans</option>
           </select>
           <div class="invalid-feedback">
             Jenis kontrak tidak boleh kosong.
@@ -199,10 +202,10 @@
         <div class="col-8">
           <select class="form-control" name="housing_type" id="housing_type" required>
             <option value="" disabled="disabled" selected="selected">Choose option</option>
-            <option value="House / Apartement">House / Apartement</option>
-            <option value="Municipal Apartement">Municipal Apartement</option>
-            <option value="Rented Apartement">Rented Apartement</option>
-            <option value="With Parents">With Parents</option>
+            <option value="House / apartment">House / apartment</option>
+            <option value="Municipal apartment">Municipal apartment</option>
+            <option value="Rented apartment">Rented apartment</option>
+            <option value="With parents">With parents</option>
           </select>
           <div class="invalid-feedback">
             Tempat tinggal saat ini tidak boleh kosong.
@@ -212,7 +215,7 @@
       <div class="form-group row">
         <label class="col-4 col-form-label labelku">Tenor</label>
         <div class="col-8">
-          <input class="form-control" type="number" name="tenor" id="tenor" onkeyup="hitung()" required>
+          <input class="form-control" type="number" name="tenor" id="tenor" onkeyup="hitung()" required min="1">
           <div class="invalid-feedback">
             Tenor tidak boleh kosong.
           </div>
@@ -254,7 +257,7 @@
     </div>
     <div class="modal-footer">
       <a href="cermati.php" class="btn btn-secondary">Batal</a>
-      <input type="submit" class="btn btn-danger" name="submit" value="Simpan">
+      <input type="submit" class="btn btn-danger" name="simpan" value="Simpan">
     </div>
   </form>
 
@@ -266,7 +269,7 @@
       uang = split[0],
       pinjaman = split[1];
       pinjaman = pinjaman.replace(/[.]+/g, '');
-      if (parseInt(pinjaman) > 5000000) pinjaman = 5000000;
+      // if (parseInt(pinjaman) > 5000000) pinjaman = 5000000;
       var hitung = parseInt(pinjaman) / parseInt(document.getElementById('tenor').value);
       var tampil = thousands_separators(hitung);
       if (tampil != null) {
@@ -319,21 +322,8 @@
 
     // Mengubah format pecahan menjadi desimal
     function handleChange(input) {
-      var persen = parseInt(input.value) / 100;
-      if (persen > 1) {
-        input.value = 1;
-      } else {
-        input.value = persen;
-      }
-    }
-
-    // Validasi input hanya angka
-    function hanyaAngka(evt) {
-      var charCode = (evt.which) ? evt.which : event.keyCode
-      if (charCode > 31 && (charCode < 48 || charCode > 57)) {
-        return false;
-      }
-      return true;
+      if (input.value < 0) input.value = 0;
+      if (input.value > 100) input.value = 100;
     }
   </script>
 

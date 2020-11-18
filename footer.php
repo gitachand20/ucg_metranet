@@ -55,6 +55,41 @@
     </div>
   </div>
 
+  <div class="modal fade" id="hasilPrediksi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" style="font-weight: bold;">HASIL PREDIKSI</h3>
+          <a href="cermati.php" class="close">
+            <span aria-hidden="true">×</span>
+          </a>
+        </div>
+        <div class="modal-body">
+          <table style="width: 100%;">
+            <tr>
+              <td style="font-weight: bold; width: 40%;">DEFAULT PROBABILITY</td>
+              <td style="width: 5%;">:</td>
+              <td>______________</td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold;">PREDICTION</td>
+              <td>:</td>
+              <td>______________</td>
+            </tr>
+            <tr>
+              <td style="font-weight: bold;">PREDICTION LEVEL</td>
+              <td>:</td>
+              <td>______________</td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-primary" href="cermati.php">OK</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

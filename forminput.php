@@ -35,7 +35,7 @@
       <div class="form-group row">
         <label class="col-4 col-form-label labelku">Precentase Scoring</label>
         <div class="col-8">
-          <input class="form-control" type="number" name="ext_score_2" id="ext_score_2" required min="0.01" step="0.01" onchange="handleChange(this)">
+          <input class="form-control" type="number" name="ext_score_2" id="ext_score_2" required min="0" step="0.0000000001" onchange="handleChange(this)">
           <div class="invalid-feedback">
             Presentase scoring tidak boleh kosong.
           </div>

@@ -34,7 +34,7 @@
       </div>
       <div class="form-group row">
         <label class="col-4 col-form-label labelku">Precentase Scoring</label>
-        <div class="col-8" id="number">
+        <div class="col-8">
           <input class="form-control" type="number" name="ext_score_2" id="ext_score_2" required min="0.01" step="0.01" onchange="handleChange(this)">
           <div class="invalid-feedback">
             Presentase scoring tidak boleh kosong.
@@ -326,21 +326,3 @@
       if (input.value > 100) input.value = 100;
     }
   </script>
-
-<!-- <div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-      <div class="modal-footer">
-        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-        <a class="btn btn-primary" href="index.php">Logout</a>
-      </div>
-    </div>
-  </div>
-</div> -->

@@ -118,6 +118,10 @@
 
   <script src="js/global.js"></script>
 
+  <script type="text/javascript">
+    $('#organization_type').select2();
+  </script>
+
   <?php
     if (isset($_GET['id'])) {
       $id = $_GET['id'];

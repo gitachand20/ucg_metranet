@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Precentase Scoring</label>
+        <label class="col-4 col-form-label labelku">Precentase Scoring (%)</label>
         <div class="col-8">
           <input class="form-control" type="number" name="ext_score_2" id="ext_score_2" required min="0" step="0.0000000001" onchange="handleChange(this)">
           <div class="invalid-feedback">
@@ -45,7 +45,7 @@
         <label class="col-4 col-form-label labelku">Lama Bekerja</label>
         <div class="form-group row col-8">
           <div class="col-6">
-            <input class="form-control" type="number" name="days_work" id="days_work" required placeholder="Tahun" min="0">
+            <input class="form-control" type="number" name="days_work" id="days_work" required placeholder="Tahun" min="2" onchange="tahunKerja(this)">
             <div class="invalid-feedback">
               Tahun lama bekerja tidak boleh kosong.
             </div>
@@ -65,7 +65,6 @@
               <option value="9">9</option>
               <option value="10">10</option>
               <option value="11">11</option>
-              <option value="12">12</option>
             </select>
             <div class="invalid-feedback">
               Bulan lama bekerja tidak boleh kosong.
@@ -82,6 +81,7 @@
             <option value="Incomplete higher">Incomplete higher</option>
             <option value="Lower secondary">Lower secondary</option>
             <option value="Secondary / secondary special">Secondary / secondary special</option>
+            <option value="Academic degree">Academic degree</option>
           </select>
           <div class="invalid-feedback">
             Pendidikan tidak boleh kosong.
@@ -119,6 +119,7 @@
             <option value="Civil marriage">Civil marriage</option>
             <option value="Single / not married">Single / not married</option>
             <option value="Widow">Widow</option>
+            <option value="Separated">Separated</option>
           </select>
           <div class="invalid-feedback">
             Status perkawinan tidak boleh kosong.
@@ -128,13 +129,65 @@
       <div class="form-group row">
         <label class="col-4 col-form-label labelku">Jenis Organisasi</label>
         <div class="col-8">
-          <select class="form-control" name="organization_type" id="organization_type" required>
+          <select class="form-control" name="organization_type" id="organization_type" required style="width: 100%;">
             <option value="" disabled="disabled" selected="selected">Choose option</option>
-            <option value="NA1">NA1</option>
-            <option value="Medicine">Medicine</option>
-            <option value="Industry: type 5">Industry: type 5</option>
-            <option value="Construction">Construction</option>
+            <option value="Advertising">Advertising</option>
+            <option value="Agriculture">Agriculture</option>
+            <option value="Bank">Bank</option>
+            <option value="Business Entity Type 1">Business Entity Type 1</option>
+            <option value="Business Entity Type 2">Business Entity Type 2</option>
             <option value="Business Entity Type 3">Business Entity Type 3</option>
+            <option value="Cleaning">Cleaning</option>
+            <option value="Construction">Construction</option>
+            <option value="Culture">Culture</option>
+            <option value="Electricity">Electricity</option>
+            <option value="Emergency">Emergency</option>
+            <option value="Government">Government</option>
+            <option value="Hotel">Hotel</option>
+            <option value="Housing">Housing</option>
+            <option value="Industry: type 1">Industry: type 1</option>
+            <option value="Industry: type 2">Industry: type 2</option>
+            <option value="Industry: type 3">Industry: type 3</option>
+            <option value="Industry: type 4">Industry: type 4</option>
+            <option value="Industry: type 5">Industry: type 5</option>
+            <option value="Industry: type 6">Industry: type 6</option>
+            <option value="Industry: type 7">Industry: type 7</option>
+            <option value="Industry: type 8">Industry: type 8</option>
+            <option value="Industry: type 9">Industry: type 9</option>
+            <option value="Industry: type 10">Industry: type 10</option>
+            <option value="Industry: type 11">Industry: type 11</option>
+            <option value="Industry: type 12">Industry: type 12</option>
+            <option value="Industry: type 13">Industry: type 13</option>
+            <option value="Insurance">Insurance</option>
+            <option value="Kindergarten">Kindergarten</option>
+            <option value="Legal Services">Legal Services</option>
+            <option value="Medicine">Medicine</option>
+            <option value="Military">Military</option>
+            <option value="Mobile">Mobile</option>
+            <option value="NA1">NA1</option>
+            <option value="Other">Other</option>
+            <option value="Police">Police</option>
+            <option value="Postal">Postal</option>
+            <option value="Realtor">Realtor</option>
+            <option value="Religion">Religion</option>
+            <option value="Restaurant">Restaurant</option>
+            <option value="School">School</option>
+            <option value="Security">Security</option>
+            <option value="Security Ministries">Security Ministries</option>
+            <option value="Self-employed">Self-employed</option>
+            <option value="Services">Services</option>
+            <option value="Telecom">Telecom</option>
+            <option value="Trade: type 1">Trade: type 1</option>
+            <option value="Trade: type 2">Trade: type 2</option>
+            <option value="Trade: type 3">Trade: type 3</option>
+            <option value="Trade: type 4">Trade: type 4</option>
+            <option value="Trade: type 5">Trade: type 5</option>
+            <option value="Trade: type 6">Trade: type 6</option>
+            <option value="Trade: type 7">Trade: type 7</option>
+            <option value="Transport: type 1">Transport: type 1</option>
+            <option value="Transport: type 2">Transport: type 2</option>
+            <option value="Transport: type 3">Transport: type 3</option>
+            <option value="Transport: type 4">Transport: type 4</option>
             <option value="University">University</option>
           </select>
           <div class="invalid-feedback">
@@ -151,6 +204,9 @@
             <option value="Working">Working</option>
             <option value="State servant">State servant</option>
             <option value="Pensioner">Pensioner</option>
+            <option value="Unemployed">Unemployed</option>
+            <option value="Student">Student</option>
+            <option value="Businessman">Businessman</option>
           </select>
           <div class="invalid-feedback">
             Jenis pendapatan tidak boleh kosong.
@@ -160,7 +216,7 @@
       <div class="form-group row">
         <label class="col-4 col-form-label labelku">Tanggal Terakhir Update Id (KTP/SIM/dll)</label>
         <div class="col-8">
-          <input class="form-control" type="date" name="days_id_change" id="days_id_change" required>
+          <input class="form-control" type="date" name="last_update" id="last_update" required onchange="cal()">
           <div class="invalid-feedback">
             Tanggal terakhir update Id tidak boleh kosong.
           </div>
@@ -169,7 +225,7 @@
       <div class="form-group row">
         <label class="col-4 col-form-label labelku">Tanggal Pengajuan</label>
         <div class="col-8">
-          <input class="form-control" type="date" name="days_id_change1" id="days_id_change1" required>
+          <input class="form-control" type="date" name="submission_date" id="submission_date" required onchange="cal()">
           <div class="invalid-feedback">
             Tanggal pengajuan tidak boleh kosong.
           </div>
@@ -206,6 +262,8 @@
             <option value="Municipal apartment">Municipal apartment</option>
             <option value="Rented apartment">Rented apartment</option>
             <option value="With parents">With parents</option>
+            <option value="Office apartment">Office apartment</option>
+            <option value="Co-op apartment">Co-op apartment</option>
           </select>
           <div class="invalid-feedback">
             Tempat tinggal saat ini tidak boleh kosong.
@@ -215,7 +273,16 @@
       <div class="form-group row">
         <label class="col-4 col-form-label labelku">Tenor</label>
         <div class="col-8">
-          <input class="form-control" type="number" name="tenor" id="tenor" onkeyup="hitung()" required min="1">
+          <!-- <input class="form-control" type="number" name="tenor" id="tenor" onkeyup="hitung()" required min="1"> -->
+          <select class="form-control" name="tenor" id="tenor" onchange="hitung()" required>
+            <option value="" disabled="disabled" selected="selected">Choose option</option>
+            <option value="6">6</option>
+            <option value="12">12</option>
+            <option value="18">18</option>
+            <option value="24">24</option>
+            <option value="30">30</option>
+            <option value="36">36</option>
+          </select>
           <div class="invalid-feedback">
             Tenor tidak boleh kosong.
           </div>
@@ -239,7 +306,7 @@
       <div class="form-group row">
         <label class="col-4 col-form-label labelku">Tanggal Join di Bank</label>
         <div class="col-8">
-          <input class="form-control" type="date" name="days_registration" id="days_registration" required> 
+          <input class="form-control" type="date" name="register_date" id="register_date" onchange="cal2()" required> 
           <div class="invalid-feedback">
             Tanggal join di bank tidak boleh kosong.
           </div>
@@ -248,7 +315,7 @@
       <div class="form-group row">
         <label class="col-4 col-form-label labelku">Tanggal Pengajuan Pinjaman</label>
         <div class="col-8">
-          <input class="form-control" type="date" name="days_registration1" id="days_registration1" required>
+          <input class="form-control" type="date" name="submission_date2" id="submission_date2" onchange="cal2()" required>
           <div class="invalid-feedback">
             Tanggal pengauan pinjaman tidak boleh kosong.
           </div>
@@ -257,7 +324,7 @@
     </div>
     <div class="modal-footer">
       <a href="cermati.php" class="btn btn-secondary">Batal</a>
-      <input type="submit" class="btn btn-danger" name="simpan" value="Simpan">
+      <input type="submit" class="btn btn-danger" name="simpan" value="Predik">
     </div>
   </form>
 
@@ -267,14 +334,18 @@
       var pinjaman = document.getElementById('approved_credit').value,
       split = pinjaman.split(" "),
       uang = split[0],
-      pinjaman = split[1];
+      pinjaman = split[1],
       pinjaman = pinjaman.replace(/[.]+/g, '');
+      
       // if (parseInt(pinjaman) > 5000000) pinjaman = 5000000;
       var hitung = parseInt(pinjaman) / parseInt(document.getElementById('tenor').value);
       var tampil = thousands_separators(hitung);
-      if (tampil != null) {
-        document.getElementById('annuity').value = uang + " " + tampil;
-      }
+
+      if (isNaN(hitung)) {
+        document.getElementById('annuity').value = '';
+      } else {
+        document.getElementById('annuity').value = uang + ' ' + tampil;
+      }    
     }
 
     // Menambahkan titik untuk ribuan
@@ -325,4 +396,16 @@
       if (input.value < 0) input.value = 0;
       if (input.value > 100) input.value = 100;
     }
+
+    function tahunKerja(input) {
+      if (input.value < 2) input.value = 2;
+    }
+
+    day_age.max = new Date().toISOString().split("T")[0];
+    last_update.max = new Date().toISOString().split("T")[0];
+    submission_date.max = new Date().toISOString().split("T")[0];
+    days_registration.max = new Date().toISOString().split("T")[0];
+    register_date.max = new Date().toISOString().split("T")[0];
+    submission_date2.max = new Date().toISOString().split("T")[0];
+
   </script>

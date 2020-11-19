@@ -20,10 +20,10 @@
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
   <!-- Vendor CSS-->
-  <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
   <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
+  <link href="vendor/select2/select2.min.css" rel="stylesheet">
+  
   <link rel="icon" type="image/png" href="img/metranet.png">
 
 </head>

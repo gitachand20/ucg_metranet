@@ -13,9 +13,9 @@
   </style>
 
   <form name="form_input" class="needs-validation" method="POST" action="hasil.php" novalidate>
-    <div class="modal-header" style="background-color: #000;">
+    <div class="modal-header" style="background-color: #EF7A48;">
       <h3 class="modal-title judul">FORM INPUT DEBITUR</h3>
-      <a href="cermati.php" class="close">
+      <a href="hasil_prediksi.php" class="close">
         <span aria-hidden="true">×</span>
       </a>
     </div>
@@ -26,7 +26,7 @@
       <div class="form-group row">
         <label class="col-4 col-form-label labelku">Nominal Pinjaman</label>
         <div class="col-8">
-          <input class="form-control" type="text" name="approved_credit" id="approved_credit" onkeyup="hitung()" required min="0">
+          <input class="form-control" type="text" name="approved_credit" id="approved_credit" onchange="hitung()" required>
           <div class="invalid-feedback">
             Nominal pinjaman tidak boleh kosong.
           </div>
@@ -35,7 +35,7 @@
       <div class="form-group row">
         <label class="col-4 col-form-label labelku">Precentase Scoring (%)</label>
         <div class="col-8">
-          <input class="form-control" type="number" name="ext_score_2" id="ext_score_2" required min="0" step="0.0000000001" onchange="handleChange(this)">
+          <input class="form-control" type="number" name="ext_score_2" id="ext_score_2" required min="0" step="0.0000000001" max="100" onchange="handleChange(this)">
           <div class="invalid-feedback">
             Presentase scoring tidak boleh kosong.
           </div>
@@ -45,13 +45,13 @@
         <label class="col-4 col-form-label labelku">Lama Bekerja</label>
         <div class="form-group row col-8">
           <div class="col-6">
-            <input class="form-control" type="number" name="days_work" id="days_work" required placeholder="Tahun" min="2" onchange="tahunKerja(this)">
+            <input class="form-control" type="number" name="year" id="year" required placeholder="Tahun" min="2" onchange="tahunKerja(this)">
             <div class="invalid-feedback">
               Tahun lama bekerja tidak boleh kosong.
             </div>
           </div>
           <div class="col-6">
-            <select class="form-control" name="bulan" id="bulan" required>
+            <select class="form-control" name="month" id="month" required>
               <option value="" disabled="disabled" selected="selected">Bulan</option>
               <option value="0">0</option>
               <option value="1">1</option>
@@ -247,7 +247,7 @@
       <div class="form-group row">
         <label class="col-4 col-form-label labelku">Pendapatan (Perbulan)</label>
         <div class="col-8">
-          <input class="form-control" type="text" name="income" id="income" required min="0">
+          <input class="form-control" type="text" name="income" id="income" required onchange="cekPendapatan()">
           <div class="invalid-feedback">
             Pendapatan (perbulan) tidak boleh kosong.
           </div>
@@ -323,7 +323,7 @@
       </div>
     </div>
     <div class="modal-footer">
-      <a href="cermati.php" class="btn btn-secondary">Batal</a>
+      <a href="hasil_prediksi.php" class="btn btn-secondary">Batal</a>
       <input type="submit" class="btn btn-danger" name="simpan" value="Predik">
     </div>
   </form>
@@ -334,18 +334,39 @@
       var pinjaman = document.getElementById('approved_credit').value,
       split = pinjaman.split(" "),
       uang = split[0],
-      pinjaman = split[1],
-      pinjaman = pinjaman.replace(/[.]+/g, '');
-      
-      // if (parseInt(pinjaman) > 5000000) pinjaman = 5000000;
-      var hitung = parseInt(pinjaman) / parseInt(document.getElementById('tenor').value);
-      var tampil = thousands_separators(hitung);
+      nominal = split[1],
+      credit = nominal.replace(/[.]+/g, '');
 
-      if (isNaN(hitung)) {
-        document.getElementById('annuity').value = '';
+      if (credit < 3000000) {
+        // alert('Minimal pinjaman sebesar Rp. 3.000.000');
+        swal({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Minimal pinjaman sebesar Rp. 3.000.000'
+        })
+        document.getElementById('approved_credit').value = '';
+        document.form_input.approved_credit.focus();
+      } else if (credit > 30000000) {
+        // alert('Maksimal pinjaman sebesar Rp. 30.000.000');
+        swal({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Maksimal pinjaman sebesar Rp. 30.000.000'
+        })
+        document.getElementById('approved_credit').value = '';
+        document.form_input.approved_credit.focus();
       } else {
-        document.getElementById('annuity').value = uang + ' ' + tampil;
-      }    
+        var hitung = parseInt(credit) / parseInt(document.getElementById('tenor').value);
+        var tampil = thousands_separators(hitung);
+
+        // Untuk memberikan nilai blank pada annuity saat hitung bernilai NaN
+        if (isNaN(hitung)) {
+          document.getElementById('annuity').value = '';
+        } else {
+          document.getElementById('annuity').value = uang + ' ' + tampil;
+        }  
+      }
+        
     }
 
     // Menambahkan titik untuk ribuan
@@ -393,12 +414,54 @@
 
     // Mengubah format pecahan menjadi desimal
     function handleChange(input) {
-      if (input.value < 0) input.value = 0;
-      if (input.value > 100) input.value = 100;
+      if (input.value < 0) {
+        swal({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Minimal percentase scoring 0'
+        })
+        document.getElementById('ext_score_2').value = '';
+        document.form_input.ext_score_2.focus();
+      }
+
+      if (input.value > 100){
+        swal({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Maksimal percentase scoring 100'
+        })
+        document.getElementById('ext_score_2').value = '';
+        document.form_input.ext_score_2.focus();
+      }
     }
 
     function tahunKerja(input) {
-      if (input.value < 2) input.value = 2;
+      if (input.value < 2) {
+        swal({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Minimal lama bekerja 2 Tahun.'
+        })
+      }
+    }
+
+    function cekPendapatan() {
+      var cek = document.getElementById('income').value,
+      split = cek.split(" "),
+      uang = split[0],
+      nominal = split[1],
+      pendapatan = nominal.replace(/[.]+/g, '');
+
+      if (pendapatan < 3000000) {
+        // alert('Minimal pendapatan sebesar Rp. 3.000.000');
+        swal({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Minimal pendapatan sebesar Rp. 3.000.000'
+        })
+        document.getElementById('income').value = '';
+        document.form_input.income.focus();
+      }
     }
 
     day_age.max = new Date().toISOString().split("T")[0];

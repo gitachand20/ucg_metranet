@@ -1,19 +1,45 @@
 <?php include "header.php"; ?>
+	
+	<div class="d-sm-flex align-items-center justify-content-between mb-4">
+		<h1 class="h3 mb-0 text-gray-800">Customer Profiling Analysis</h1>
+	</div>
 
 	<div class="col-lg-12">
+		<ul class="nav nav-tabs" role="tablist">
 
-		<div class="card shadow mb-12">
-			<!-- Card Header 
-			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-				<h6 class="m-0 font-weight-bold text-primary">Dashboard Cermati</h6>
+			<li class="nav-item">
+				<a class="nav-link active" href="#customer_360" role="tab" data-toggle="tab" id="360">Customer 360</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="#cpa" role="tab" data-toggle="tab" id="dashboard">Dashboard CPA</a>
+			</li>
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane " id="cpa">
+				<?php include "dashboard_cpa.php"; ?>
 			</div>
-			-->
-			<!-- Card Body -->
-			<div class="card-body embed-responsive embed-responsive-1by1">
-				<iframe src="http://172.17.62.87:3000/public/dashboard/fd28490f-7692-4bec-8a2f-91ddbfecbe8a"></iframe>
+			<div role="tabpanel" class="tab-pane active" id="customer_360">
+				<?php include "customer_360.php" ?>
 			</div>
 		</div>
-
 	</div>
+
+	<script type="text/javascript">
+		// function inputCif() {
+	 //    	swal({
+		//         icon: 'error',
+		//         title: 'Oops...',
+		//         text: 'Input CIF Number'
+	 //      	})
+	 //    }
+
+	 	document.getElementById("menu_dash").classList.add("active");
+		document.getElementById("icon_menu_dash").style.color = "#F02632";
+		document.getElementById("name_menu_dash").style.color = "#F02632";
+		document.getElementById("icon_cpa").style.color = "#F02632";
+		document.getElementById("name_cpa").style.color = "#F02632";
+	</script>
 
 <?php include "footer.php"; ?>

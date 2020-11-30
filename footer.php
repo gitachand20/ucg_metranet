@@ -10,7 +10,7 @@
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>Copyright &copy; Your Website 2020</span><br>
-            <span>Versi 1.1</span>
+            <span>Versi 2.0</span>
           </div>
         </div>
       </footer>
@@ -60,7 +60,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h3 class="modal-title" style="font-weight: bold;">HASIL PREDIKSI</h3>
-          <a href="cermati.php" class="close">
+          <a href="hasil_prediksi.php" class="close">
             <span aria-hidden="true">×</span>
           </a>
         </div>
@@ -84,12 +84,12 @@
           </table>
         </div>
         <div class="modal-footer">
-          <a class="btn btn-primary" href="cermati.php">OK</a>
+          <a class="btn btn-primary" href="hasil_prediksi.php">OK</a>
         </div>
       </div>
     </div>
   </div>
-
+  
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -101,25 +101,78 @@
   <script src="js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+  <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
 
   <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-
+  <!-- <script src="js/demo/chart-area-demo.js"></script> -->
+  <!-- <script src="js/demo/chart-pie-demo.js"></script> -->
+  
   <!-- Vendor JS-->
-  <script src="vendor/select2/select2.min.js"></script>
-  <script src="vendor/datepicker/moment.min.js"></script>
-  <script src="vendor/datepicker/daterangepicker.js"></script>
-  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-  <script src="js/demo/datatables-demo.js"></script>
+  <!-- <script src="vendor/select2/select2.min.js"></script> -->
+  <!-- <script src="vendor/datepicker/moment.min.js"></script> -->
+  <!-- <script src="vendor/datepicker/daterangepicker.js"></script> -->
+  
   <script src="js/validasi.js"></script>
 
   <script src="js/global.js"></script>
+  <script src="https://unpkg.com/sweetalert2@7.8.2/dist/sweetalert2.all.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <script src="js/demo/datatables-demo.js"></script>
 
   <script type="text/javascript">
-    $('#organization_type').select2();
+    // $('#organization_type').select2();
+    $(document).ready(function () {
+      $( "#day_age" ).datepicker({
+        dateFormat: "yyyy/mm/dd"
+      }); 
+    });
+
+    function spinner() {
+      if ($("#load").hasClass("d-none")){
+        $("#load").hide().removeClass("d-none");
+        $("#load").show();
+
+        setTimeout(function(){
+        if ($("#content1").hasClass("d-none")){
+            $("#load").hide();
+            $("#fitur").hide().removeClass("d-none");
+            $("#fitur").show();
+            $("#content1").hide().removeClass("d-none");
+            $("#content1").show();
+          }
+        },5000);
+      } else {
+        $("#load").show();
+        $("#content1").hide();
+
+        setTimeout(function(){
+          $("#load").hide();
+          $("#content1").show();
+        },5000);
+      }
+    }
+
+    function loading() {
+      document.getElementsByClassName("loader")[0].style.display = "block";
+      setTimeout(function(){
+        $("#loading").hide();
+        $(".loader").hide();
+        $("#btn-load").hide();
+        console.log("test");
+        if ($("#con_home").hasClass("d-none")){
+          $("#con_home").hide().removeClass("d-none");
+          $("#con_home").show();
+        }
+      },5000);
+    }
   </script>
 
   <?php

@@ -9,80 +9,99 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Metranet</title>
+  <title>Telkom Indonesia</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/sb-admin-2.css" rel="stylesheet">
+  <link href="css/loading.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" type="text/css" href="css/carousel.css"> -->
 
   <!-- Vendor CSS-->
   <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-  <link href="vendor/select2/select2.min.css" rel="stylesheet">
-  
-  <link rel="icon" type="image/png" href="img/metranet.png">
+  <!-- <link href="vendor/select2/select2.min.css" rel="stylesheet"> -->
+
+  <link rel="icon" type="image/png" href="img/telkom.png">
 
 </head>
 
 <body id="page-top">
-
   <!-- Page Wrapper -->
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-white sidebar sidebar-light accordion toggled" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home.php">
         <div class="sidebar-brand-icon rotate-n-15">
-          <img src="img/metranet.png" width="40" height="40">
+          <img src="img/telkom.png" width="40" height="40">
         </div>
-        <div class="sidebar-brand-text mx-3">Metranet</div>
+        <div class="sidebar-brand-text mx-3">Telkom Indonesia</div>
       </a>
 
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
 
       <!-- Nav Item - Home -->
-      <li class="nav-item">
+      <li class="nav-item" id="home">
         <a class="nav-link" href="home.php">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Home</span></a>
+          <i class="fas fa-fw fa-tachometer-alt" id="icon_home" style="color: ;"></i>
+          <span id="name_home" style="color: ;">Home</span></a>
       </li>
 
-      <!-- Nav Item - Credit Scoring -->
-      <li class="nav-item">
-        <a class="nav-link" href="cermati.php">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Credit Scoring</span></a>
+      <!-- Nav Item - Form Input Debitur -->
+      <li class="nav-item" id="form_input">
+        <a class="nav-link" href="hasil_prediksi.php">
+          <i class="fas fa-fw fa-edit" id="icon_form" style="color: ;"></i>
+          <span id="name_form" style="color: ;">Form Input Debitur</span></a>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#credit" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-list-ul"></i>
-          <span>Credit Scoring</span>
+
+      <li class="nav-item" id="menu_dash">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#mdashboard" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-fw fa-list-ul" id="icon_menu_dash" style="color: ;"></i>
+          <span id="name_menu_dash" style="color: ;">Dashboard</span>
         </a>
-        <div id="credit" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div id="mdashboard" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="cpa.php">
+              <i class="fas fa-fw fa-chart-area" id="icon_cpa" style="color: ;"></i>
+              <span id="name_cpa" style="color: ;">Customer Profiling Analysis</span>
+            </a>
+            <a class="collapse-item" href="behavior.php">
+              <i class="fas fa-fw fa-chart-area" id="icon_bs" style="color: ;"></i>
+              <span id="name_bs" style="color: ;">Behavior Scoring</span>
+            </a>
             <a class="collapse-item" href="cermati.php">
-              <i class="fas fa-fw fa-chart-area"></i>
-              <span>Cermati</span>
+              <i class="fas fa-fw fa-chart-area" id="icon_cs" style="color: ;"></i>
+              <span id="name_cs" style="color: ;">Credit Risk Scoring</span>
             </a>
           </div>
         </div>
+      </li>  
+
+      <!-- Nav Item - CPA -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="cpa.php">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>CPA</span></a>
       </li> -->
 
       <!-- Nav Item - Behavior Scoring -->
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#behavior" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-list-ul"></i>
           <span>Behavior Scoring</span>
         </a>
         <div id="behavior" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
+          <div class="bg-danger py-2 collapse-inner rounded">
             <a class="collapse-item" href="thelris.php">
               <i class="fas fa-fw fa-chart-area"></i>
               <span>Thelris</span>
@@ -93,33 +112,20 @@
             </a>
           </div>
         </div>
-      </li>
+      </li>  --> 
 
-      <!-- Nav Item - CPA -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#cpa" aria-expanded="true" aria-controls="collapseTwo">
-          <i class="fas fa-fw fa-list-ul"></i>
-          <span>CPA</span>
-        </a>
-        <div id="cpa" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="cpa.php">
-              <i class="fas fa-fw fa-chart-area"></i>
-              <span>Dashboard CPA</span>
-            </a>
-            <a class="collapse-item" href="customer_360.php">
-              <i class="fas fa-fw fa-table"></i>
-              <span>Customer 360</span>
-            </a>
-          </div>
-        </div>
+      <!-- Nav Item - Credit Scoring -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="cermati.php">
+          <i class="fas fa-fw fa-chart-area"></i>
+          <span>Credit Scoring</span></a>
       </li>
-
-      <!-- Nav Item - Churn -->
+ -->
+      <!-- Nav Item - Churn Prevention -->
       <!-- <li class="nav-item">
         <a class="nav-link" href="#">
           <i class="fas fa-fw fa-chart-area"></i>
-          <span>Churn</span></a>
+          <span>Churn Prevention</span></a>
       </li> -->
 
       <!-- Divider -->

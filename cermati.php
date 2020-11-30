@@ -7,10 +7,7 @@
 	<div class="col-lg-12">
 		<ul class="nav nav-tabs" role="tablist">
 			<li class="nav-item">
-				<a class="nav-link active" href="#forminput" role="tab" data-toggle="tab">Form Input Debitur</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#prediction" role="tab" data-toggle="tab">Dashboard Prediction</a>
+				<a class="nav-link active" href="#prediction" role="tab" data-toggle="tab">Dashboard Prediction</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#segmentation" role="tab" data-toggle="tab">Dashboard Segmentation</a>
@@ -19,10 +16,7 @@
 
 		<!-- Tab panes -->
 		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane active" id="forminput">
-				<?php include "hasil_prediksi.php"; ?>
-			</div>
-			<div role="tabpanel" class="tab-pane" id="prediction">
+			<div role="tabpanel" class="tab-pane active" id="prediction">
 				<div class="card-body embed-responsive embed-responsive-1by1">
 					<iframe src="http://172.17.62.87:3000/public/dashboard/433dc648-5f72-4096-aa1c-2e5d9dbbb9a1"></iframe>
 				</div>
@@ -34,5 +28,13 @@
 			</div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+		document.getElementById("menu_dash").classList.add("active");
+		document.getElementById("icon_menu_dash").style.color = "#F02632";
+		document.getElementById("name_menu_dash").style.color = "#F02632";
+		document.getElementById("icon_cs").style.color = "#F02632";
+		document.getElementById("name_cs").style.color = "#F02632";
+	</script>
 
 <?php include "footer.php"; ?>

@@ -1,23 +1,22 @@
+<?php include "header.php"; ?>
+	
+	<div class="d-sm-flex align-items-center justify-content-between mb-4">
+		<h1 class="h3 mb-0 text-gray-800">Form Debitur</h1>
+	</div>
+
+	<div class="mb-4" style="width: 100%; float: right;">
+		<a href="#" class="btn btn-custom btn-icon-split" data-toggle="modal" data-target=".bd-example-modal-lg" data-backdrop="static" data-keyboard="false" style="float: right;">
+			<span class="icon1 text-white-50">
+				<i class="fas fa-plus"></i>
+			</span>
+			<span class="text">Tambah Data</span>
+		</a>
+	</div>
 
  	<div class="card shadow mb-4">
- 		<div class="card-header py-3">
- 			<table width="100%;" style="text-align: right;">
- 				<tr>
- 					<td>
- 						<a href="#" class="btn btn-success btn-icon-split" data-toggle="modal" data-target=".bd-example-modal-lg" data-backdrop="static" data-keyboard="false">
- 							<span class="icon text-white-50">
- 								<i class="fas fa-plus"></i>
- 							</span>
- 							<span class="text">Tambah Data</span>
- 						</a>
- 					</td>
- 				</tr>
- 			</table>
- 			
- 		</div>
  		<div class="card-body">
  			<div class="table-responsive">
- 				<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+ 				<table class="table table-striped table-bordered" id="dataTable" width="100%" cellspacing="0">
  					<thead>
  						<tr>
  							<th>No</th>
@@ -43,7 +42,7 @@
  							<td></td>
  							<td></td>
  							<td style="text-align: center;">
- 								<a href="#" class="btn btn-info btn-icon-split">
+ 								<a href="#" class="btn btn-detail">
 		 							<span class="text">Detail</span>
 		 						</a>
  							</td>
@@ -53,3 +52,11 @@
  			</div>
  		</div>
  	</div>
+
+ 	<script type="text/javascript">
+		document.getElementById("form_input").classList.add("active");
+		document.getElementById("icon_form").style.color = "#F02632";
+		document.getElementById("name_form").style.color = "#F02632";
+	</script>
+
+<?php include "footer.php"; ?>

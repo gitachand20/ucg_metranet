@@ -6,21 +6,20 @@
 
 	<div class="col-lg-12">
 		<ul class="nav nav-tabs" role="tablist">
-
 			<li class="nav-item">
-				<a class="nav-link active" href="#customer_360" role="tab" data-toggle="tab" id="360">Customer 360</a>
+				<a class="nav-link active" href="#cpa" role="tab" data-toggle="tab" id="dashboard">Dashboard CPA</a>
+				<li class="nav-item">
+				<a class="nav-link" href="#customer_360" role="tab" data-toggle="tab" id="360">Customer 360</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link " href="#cpa" role="tab" data-toggle="tab" id="dashboard">Dashboard CPA</a>
 			</li>
 		</ul>
 
 		<!-- Tab panes -->
 		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane " id="cpa">
+			<div role="tabpanel" class="tab-pane active" id="cpa">
 				<?php include "dashboard_cpa.php"; ?>
 			</div>
-			<div role="tabpanel" class="tab-pane active" id="customer_360">
+			<div role="tabpanel" class="tab-pane" id="customer_360">
 				<?php include "customer_360.php" ?>
 			</div>
 		</div>

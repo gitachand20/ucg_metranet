@@ -1,9 +1,9 @@
 
 <div class="row mb-4" style="margin-top: 10px;">
-	<div class="col-lg-6" ></div>
-	<div class="col-lg-6" >
+	<div class="col-lg-7" ></div>
+	<div class="col-lg-5" >
 		<div class="row justify-content-center">
-			<div style="margin-left: 5%; margin-right: 2%;">
+			<div class="col-lg-4">
 				<select class="form-control">
 					<option value="">Bulan</option>
 					<option value="1">Januari</option>
@@ -21,7 +21,7 @@
 				</select>
 			</div>
 
-			<div style="margin-right: 2%;">
+			<div class="col-lg-4">
 				<select class="form-control">
 					<option value="">Tahun</option>
 					<option value="2018">2018</option>
@@ -30,7 +30,7 @@
 				</select>
 			</div>
 
-			<div>
+			<div class="col-lg-4">
 				<select class="form-control" name="filter_period" id="filter_period">
 					<option value="">Periode</option>
 					<option value="3">3-Months</option>
@@ -201,7 +201,7 @@
 				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/6c14d75f-3ca8-4f1c-ad11-91f11c99f01e" width="100%" height="350" allowtransparency></iframe>
 				<hr>
 				<b>Diskripsi</b>
-				<ul style="list-style-position: outside; margin-left: 1rem;">
+				<ul style="list-style-position: outside;">
 					<li>Financially Dependent : Umur customer kurang dari 18 tahun</li>
 					<li>Young Professional : Umur customer antara 18 - 30 tahun</li>
 					<li>Married Professional : Umur customer antara 30 - 45 tahun</li>
@@ -232,7 +232,7 @@
 				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/0b71b381-7ba4-4af4-841a-4a24f80b7477" frameborder="0" width="100%" height="350" allowtransparency></iframe>
 				<hr>
 				<b>Diskripsi</b>
-				<ul style="list-style-position: outside; margin-left: 1rem;">
+				<ul style="list-style-position: outside;">
 					<li>Non Users : Tidak ada transaksi selama periode sekarang maupun sebelumnya.</li>
 					<li>Growers : Ada kenaikan transaksi paling tidak sebesar x% pada periode sekarang dibanding periode sebelumnya.</li>
 					<li>Droppers : Ada penurunan transaksi paling tidak sebesar x% pada periode sekarang dibanding periode sebelumnya.</li>
@@ -262,7 +262,7 @@
 				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/53700fd7-c379-468f-92ca-2679cc30b4a9" frameborder="0" width="100%" height="350" allowtransparency></iframe>
 				<hr>
 				<b>Diskripsi</b>
-				<ul style="list-style-position: outside; margin-left: 1rem;">
+				<ul style="list-style-position: outside;">
 					<li>Money Hawks : Memanfaatkan semua channel digital dalam kesehariannya.</li>
 					<li>Digital Drifters : Memanfaatkan hampir semua channel digital kecuali dalam pembayaran tagihan.</li>
 					<li>Online Loyalist : Memanfaatkan hampir semua channel digital kecuali transaksi melalui mobile banking.</li>

@@ -65,7 +65,7 @@
 	<div>
 		<!-- Fitur -->
 		<div class="row" style="margin-top: 20px;">
-			<div class="col-lg-7" >
+			<div class="col-7" >
 				<!-- <form name="form_input" class="needs-validation" method="post" action="search_c360" novalidate>
 					<div class="autocomplete" style="width:300px;">
 						<input id="cif" type="text" name="cif" placeholder="Search CIF">
@@ -75,19 +75,19 @@
 				<!-- <button type="submit" class="sbtn btn btn-secondary" onclick="spinner()">Search</button> -->
 				<form action="#" method="post">
 					<div class="form-group row">
-						<div class="col-lg-6">
+						<div class="col-6">
 							<input class="form-control" type="text" name="cari" placeholder="Search CIF / Name" required>
 						</div>
-						<div class="col-lg-6">
+						<div class="col-6">
 							<input class="btn btn-detail" type="submit" name="btn_cari" value="Search" onclick="spinner()">
 						</div>
 					</div>
 				</form>
 			</div>
 
-			<div class="col-lg-5 d-none" id="fitur" style="float: right;">
+			<div class="col-5 d-none" id="fitur" style="float: right;">
 				<div class="form-group row">
-					<div class="col-lg-4">
+					<div class="col-4">
 						<select class="form-control" onchange="spinner()">
 							<option value="">Bulan</option>
 							<option value="1">Januari</option>
@@ -105,7 +105,7 @@
 						</select>
 					</div>
 
-					<div class="col-lg-4">
+					<div class="col-4">
 						<select class="form-control">
 							<option value="">Tahun</option>
 							<option value="2018">2018</option>
@@ -114,7 +114,7 @@
 						</select>
 					</div>
 
-					<div class="col-lg-4">
+					<div class="col-4">
 						<select class="form-control" name="filter_period" id="filter_period">
 							<option value="">Periode</option>
 							<option value="3">3-Months</option>
@@ -183,7 +183,7 @@
 		</div>
 
 		<div class="row">
-			<div class="col-lg-6">
+			<div class="col-6">
 				<div class="card shadow mb-4">
 					<div class="card-header py-3" style="background-color: #FFE8D3;">
 	                  	<h5 class="m-0 font-weight-bold" style="color: #000;"><b>Demograph</b></h5>
@@ -249,7 +249,7 @@
 	            </div>
 			</div>
 
-			<div class="col-lg-6">
+			<div class="col-6">
 				<div class="card shadow mb-4">
 					<div class="card-body">
 						<table width="100%" style="color: #000;">
@@ -301,9 +301,9 @@
 				</div>
 			</div>
 
-			<!-- <div class="col-lg-6">
+			<!-- <div class="col-6">
 				<div class="row">
-					<div class="col-lg-12">
+					<div class="col-12">
 						<div class="card shadow mb-4">
 							<div class="card-header py-3" style="background-color: #00FF00;">
 								<h6 class="m-0 font-weight-bold" style="color: #000;">
@@ -338,7 +338,7 @@
 						</div>
 					</div>
 
-					<div class="col-lg-12">
+					<div class="col-12">
 						<div class="card shadow mb-4">
 							<div class="card-header py-3" style="background-color: #00FF00;">
 								<h6 class="m-0 font-weight-bold" style="color: #000;">
@@ -390,7 +390,7 @@
 
 		<!-- GRAFIK ATAS -->
 		<div class="row">
-			<div class="col-lg-4">
+			<div class="col-4">
 				<div class="card shadow mb-4">
 					<!-- Card Header - Accordion -->
 					<div class="card-header py-3" style="background-color: #FFE8D3;">
@@ -405,7 +405,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-4">
+			<div class="col-4">
 				<div class="card shadow mb-4">
 					<!-- Card Header - Accordion -->
 					<div class="card-header py-3" style="background-color: #FFE8D3;">
@@ -420,7 +420,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-4">
+			<div class="col-4">
 				<div class="card shadow mb-4">
 					<!-- Card Header - Accordion -->
 					<div class="card-header py-3" style="background-color: #FFE8D3;">
@@ -438,7 +438,7 @@
 
 		<!-- GRAFIK BAWAH -->
 		<div class="row">
-			<div class="col-lg-12">
+			<div class="col-12">
 				<div class="card shadow mb-4">
 					<!-- Card Header - Accordion -->
 					<div class="card-header py-3" style="background-color: #FFE8D3;">

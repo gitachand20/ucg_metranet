@@ -1,9 +1,9 @@
 
 <div class="row mb-4" style="margin-top: 10px;">
-	<div class="col-lg-7" ></div>
-	<div class="col-lg-5" >
+	<div class="col-7" ></div>
+	<div class="col-5" >
 		<div class="row justify-content-center">
-			<div class="col-lg-4">
+			<div class="col-4">
 				<select class="form-control">
 					<option value="">Bulan</option>
 					<option value="1">Januari</option>
@@ -21,7 +21,7 @@
 				</select>
 			</div>
 
-			<div class="col-lg-4">
+			<div class="col-4">
 				<select class="form-control">
 					<option value="">Tahun</option>
 					<option value="2018">2018</option>
@@ -30,7 +30,7 @@
 				</select>
 			</div>
 
-			<div class="col-lg-4">
+			<div class="col-4">
 				<select class="form-control" name="filter_period" id="filter_period">
 					<option value="">Periode</option>
 					<option value="3">3-Months</option>
@@ -45,7 +45,7 @@
 
 <div class="row mb-4">
 	<!-- Total Profit Berdasarkan Sumber Profit -->
-	<div class="col-lg-6">
+	<div class="col-6">
 		<div class="card">
 			<div class="card-header">
 				<div class="tooltip1">
@@ -63,7 +63,7 @@
 		</div>
 	</div>
 
-	<div class="col-lg-6">
+	<div class="col-6">
 		<div id="demo" class="carousel slide" data-ride="carousel">
 			<!-- The slideshow -->
 			<div class="carousel-inner">
@@ -142,7 +142,7 @@
 </div>
 
 <div class="row mb-4"> 
-	<div class="col-lg-6">
+	<div class="col-6">
 		<div class="card">
 			<div class="card-header">
 				<div class="tooltip1">
@@ -160,7 +160,7 @@
 		</div>
 	</div>
 
-	<div class="col-lg-6">
+	<div class="col-6">
 		<div class="card">
 			<div class="card-header">
 				<div class="tooltip1">

@@ -4,7 +4,7 @@
 		<h1 class="h3 mb-0 text-gray-800">Cermati</h1>
 	</div>
 
-	<div class="col-lg-12">
+	<div class="col-12">
 		<ul class="nav nav-tabs" role="tablist">
 			<li class="nav-item">
 				<a class="nav-link active" href="#prediction" role="tab" data-toggle="tab">Dashboard Prediction</a>
@@ -24,10 +24,10 @@
 
 			<div role="tabpanel" class="tab-pane" id="segmentation">
 				<div class="row" style="margin-top: 20px;">
-					<div class="col-lg-7" ></div>
-					<div class="col-lg-5" >
+					<div class="col-7" ></div>
+					<div class="col-5" >
 						<div class="form-group row">
-							<div class="col-lg-4">
+							<div class="col-4">
 								<select class="form-control">
 									<option value="">Bulan</option>
 									<option value="1">Januari</option>
@@ -45,7 +45,7 @@
 								</select>
 							</div>
 
-							<div class="col-lg-4">
+							<div class="col-4">
 								<select class="form-control">
 									<option value="">Tahun</option>
 									<option value="2018">2018</option>
@@ -54,7 +54,7 @@
 								</select>
 							</div>
 
-							<div class="col-lg-4">
+							<div class="col-4">
 								<select class="form-control" name="filter_period" id="filter_period">
 									<option value="">Periode</option>
 									<option value="3">3-Months</option>
@@ -68,11 +68,11 @@
 				</div>
 
 				<div class="row mb-4">
-					<div class="col-lg-6">
+					<div class="col-6">
 						<div class="card">
 							<div class="card-header">
 								<div class="form-group1">
-									<div class="tooltip1 col-lg-8">
+									<div class="tooltip1 col-8">
 										<span style="font-weight: bold; color: #000; font-size: 1.2rem;">
 											Debitur Berdasarkan Jenis Pinjaman
 										</span>
@@ -80,7 +80,7 @@
 											Grafik ini menampilkan total debitur berdasarkan jenis pinjaman.
 										</span>
 									</div>
-									<div class="col-lg-4" style="float: right;"> 
+									<div class="col-4" style="float: right;"> 
 										<a class="btn btn-danger" href="#" data-toggle="modal" data-target="#pie1" style="float: right;">More Detail</a>
 									</div>
 								</div>
@@ -91,11 +91,11 @@
 						</div>
 					</div>
 
-					<div class="col-lg-6">
+					<div class="col-6">
 						<div class="card">
 							<div class="card-header">
 								<div class="form-group1">
-									<div class="tooltip1 col-lg-8">
+									<div class="tooltip1 col-8">
 										<span style="font-weight: bold; color: #000; font-size: 1.2rem;">
 											Debitur Berdasarkan Gender
 										</span>
@@ -103,7 +103,7 @@
 											Grafik ini  menampilkan jumlah debitur berdasarkan gender (laki-laki atau perempuan).
 										</span>
 									</div>
-									<div class="col-lg-4" style="float: right;"> 
+									<div class="col-4" style="float: right;"> 
 										<a class="btn btn-danger" href="#" data-toggle="modal" data-target="#pie2" style="float: right;">More Detail</a>
 									</div>
 								</div>
@@ -116,11 +116,11 @@
 				</div>
 
 				<div class="row mb-4">
-					<div class="col-lg-6">
+					<div class="col-6">
 						<div class="card">
 							<div class="card-header">
 								<div class="form-group1">
-									<div class="tooltip1 col-lg-8">
+									<div class="tooltip1 col-8">
 										<span style="font-weight: bold; color: #000; font-size: 1.2rem;">
 											Debitur Berdasarkan Status Keluarga
 										</span>
@@ -128,7 +128,7 @@
 											Grafik ini menampilkan total nasabah berdasarkan segmentasi status keluarga.
 										</span>
 									</div>
-									<div class="col-lg-4" style="float: right;"> 
+									<div class="col-4" style="float: right;"> 
 										<a class="btn btn-danger" href="#" data-toggle="modal" data-target="#pie3" style="float: right;">More Detail</a>
 									</div>
 								</div>
@@ -139,11 +139,11 @@
 						</div>
 					</div>
 
-					<div class="col-lg-6">
+					<div class="col-6">
 						<div class="card">
 							<div class="card-header">
 								<div class="form-group1">
-									<div class="tooltip1 col-lg-8">
+									<div class="tooltip1 col-8">
 										<span style="font-weight: bold; color: #000; font-size: 1.2rem;">
 											Debitur Berdasarkan Tempat Tinggal
 										</span>
@@ -151,7 +151,7 @@
 											Grafik ini menampilkan total debitur berdasarkan tempat tinggal.
 										</span>
 									</div>
-									<div class="col-lg-4" style="float: right;"> 
+									<div class="col-4" style="float: right;"> 
 										<a class="btn btn-danger" href="#" data-toggle="modal" data-target="#pie4" style="float: right;">More Detail</a>
 									</div>
 								</div>
@@ -164,11 +164,11 @@
 				</div>
 
 				<div class="row mb-4">
-					<div class="col-lg-6">
+					<div class="col-6">
 						<div class="card">
 							<div class="card-header">
 								<div class="form-group1">
-									<div class="tooltip1 col-lg-8">
+									<div class="tooltip1 col-8">
 										<span style="font-weight: bold; color: #000; font-size: 1.2rem;">
 											Debitur Berdasarkan Tingkat Pendidikan
 										</span>
@@ -176,7 +176,7 @@
 											Grafik ini menampilkan jumlah debitur berdasarkan segmentasi tingkat pendidikan.
 										</span>
 									</div>
-									<div class="col-lg-4" style="float: right;"> 
+									<div class="col-4" style="float: right;"> 
 										<a class="btn btn-danger" href="#" data-toggle="modal" data-target="#pie5" style="float: right;">More Detail</a>
 									</div>
 								</div>
@@ -187,11 +187,11 @@
 						</div>
 					</div>
 
-					<div class="col-lg-6">
+					<div class="col-6">
 						<div class="card">
 							<div class="card-header">
 								<div class="form-group1">
-									<div class="tooltip1 col-lg-8">
+									<div class="tooltip1 col-8">
 										<span style="font-weight: bold; color: #000; font-size: 1.2rem;">
 											Debitur Berdasarkan Kategori Pendapatan
 										</span>
@@ -199,7 +199,7 @@
 											Grafik ini menampilkan total debitur berdasarkan kategori pendapatan.
 										</span>
 									</div>
-									<div class="col-lg-4" style="float: right;"> 
+									<div class="col-4" style="float: right;"> 
 										<a class="btn btn-danger" href="#" data-toggle="modal" data-target="#pie6" style="float: right;">More Detail</a>
 									</div>
 								</div>
@@ -212,7 +212,7 @@
 				</div>
 
 				<div class="row mb-4">
-					<div class="col-lg-6">
+					<div class="col-6">
 						<div class="card">
 							<div class="card-header">
 								<div class="tooltip1">
@@ -230,7 +230,7 @@
 						</div>
 					</div>
 
-					<div class="col-lg-6">
+					<div class="col-6">
 						<div class="card">
 							<div class="card-header">
 								<div class="tooltip1">
@@ -250,7 +250,7 @@
 				</div>
 
 				<div class="row mb-4">
-					<div class="col-lg-12">
+					<div class="col-12">
 						<div class="card">
 							<div class="card-header">
 								<div class="tooltip1">

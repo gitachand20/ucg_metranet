@@ -4,7 +4,7 @@
 		<h1 class="h3 mb-0 text-gray-800">Customer Profiling Analysis</h1>
 	</div>
 
-	<div class="col-lg-12">
+	<div class="col-12">
 		<ul class="nav nav-tabs" role="tablist">
 			<li class="nav-item">
 				<a class="nav-link active" href="#cpa" role="tab" data-toggle="tab" id="dashboard">Dashboard CPA</a>

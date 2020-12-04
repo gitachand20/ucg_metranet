@@ -58,7 +58,7 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<iframe src="http://172.17.62.87:3000/public/question/377caae0-c9c5-4c85-be73-e4cdfec0adbe" width="100%" height="350"></iframe>
+				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/377caae0-c9c5-4c85-be73-e4cdfec0adbe" width="100%" height="350"></iframe>
 			</div>
 		</div>
 	</div>
@@ -155,7 +155,7 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<iframe src="http://172.17.62.87:3000/public/question/e050bd43-ea16-4093-a520-dbadef933e7f" width="100%" height="400"></iframe>
+				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/e050bd43-ea16-4093-a520-dbadef933e7f" width="100%" height="400"></iframe>
 			</div>
 		</div>
 	</div>
@@ -173,7 +173,7 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<iframe src="http://172.17.62.87:3000/public/question/8703d872-e698-4404-95af-f42ef12f950c" width="100%" height="400"></iframe>
+				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/8703d872-e698-4404-95af-f42ef12f950c" width="100%" height="400"></iframe>
 			</div>
 		</div>
 	</div>
@@ -187,18 +187,15 @@
 	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header" style="background-color: #FFA07A;">
-				<div class="tooltip1">
-					<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Nasabah Berdasarkan Profile Customer</h5>
-					<span class="tooltiptext1">
-						Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Customer Profile dalam periode waktu yang telah ditentukan.
-					</span>
-				</div>
+				<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Nasabah Berdasarkan Profile Customer</h5>
 				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">×</span>
 				</button>
 			</div>
 			<div class="modal-body">
 				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/6c14d75f-3ca8-4f1c-ad11-91f11c99f01e" width="100%" height="350" allowtransparency></iframe>
+				<hr>
+				Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Customer Profile dalam periode waktu yang telah ditentukan.
 				<hr>
 				<b>Diskripsi</b>
 				<ul style="list-style-position: outside;">
@@ -218,18 +215,15 @@
 	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header" style="background-color: #FFA07A;">
-				<div class="tooltip1">
-					<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Nasabah Berdasarkan Transaksi Customer MTD</h5>
-					<span class="tooltiptext1">
-						Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Customer Transactions dalam periode waktu yang telah ditentukan.
-					</span>
-				</div>
+				<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Nasabah Berdasarkan Transaksi Customer MTD</h5>
 				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">×</span>
 				</button>
 			</div>
 			<div class="modal-body">
 				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/0b71b381-7ba4-4af4-841a-4a24f80b7477" frameborder="0" width="100%" height="350" allowtransparency></iframe>
+				<hr>
+				Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Customer Transactions dalam periode waktu yang telah ditentukan.
 				<hr>
 				<b>Diskripsi</b>
 				<ul style="list-style-position: outside;">
@@ -248,18 +242,15 @@
 	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header" style="background-color: #FFA07A;">
-				<div class="tooltip1">
-					<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Nasabah Berdasarkan Customers Digital Maturity</h5>
-					<span class="tooltiptext1">
-						Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Customer Digital Maturity dalam periode waktu yang ditentukan di atas.
-					</span>
-				</div>
+				<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Nasabah Berdasarkan Customers Digital Maturity</h5>
 				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">×</span>
 				</button>
 			</div>
 			<div class="modal-body">
 				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/53700fd7-c379-468f-92ca-2679cc30b4a9" frameborder="0" width="100%" height="350" allowtransparency></iframe>
+				<hr>
+				Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Customer Digital Maturity dalam periode waktu yang ditentukan di atas.
 				<hr>
 				<b>Diskripsi</b>
 				<ul style="list-style-position: outside;">
@@ -279,18 +270,15 @@
 	<div class="modal-dialog modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header" style="background-color: #FFA07A;">
-				<div class="tooltip1">
-					<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Nasabah Berdasarkan Profit Bank</h5>
-					<span class="tooltiptext1">
-						Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Bank Profit dalam periode waktu yang telah ditentukan di atas.
-					</span>
-				</div>
+				<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Nasabah Berdasarkan Profit Bank</h5>
 				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">×</span>
 				</button>
 			</div>
 			<div class="modal-body">
 				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/d784dd2f-ae83-4903-a81f-a6b8c27b820b" frameborder="0" width="100%" height="350" allowtransparency></iframe>
+				<hr>
+				Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Bank Profit dalam periode waktu yang telah ditentukan di atas.
 				<hr>
 				<b>Diskripsi</b>
 				<ul style="list-style-position: outside;">

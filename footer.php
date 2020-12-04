@@ -152,10 +152,37 @@
       } else {
         $("#load").show();
         $("#content1").hide();
+        $("#content2").hide();
 
         setTimeout(function(){
           $("#load").hide();
           $("#content1").show();
+        },5000);
+      }
+    }
+
+    function spinner1() {
+      if ($("#content2").hasClass("d-none")){
+        $("#load").hide().removeClass("d-none");
+        $("#load").show();
+
+        setTimeout(function(){
+          $("#load").hide();
+          $("#fitur").hide().removeClass("d-none");
+          $("#fitur").show();
+          $("#content1").hide().removeClass("d-none");
+          $("#content1").show();
+          $("#content2").hide().removeClass("d-none");
+          $("#content2").show();
+        },5000);
+      } else {
+        $("#load").show();
+        $("#content2").hide();
+
+        setTimeout(function(){
+          $("#load").hide();
+          $("#content1").show();
+          $("#content2").show();
         },5000);
       }
     }

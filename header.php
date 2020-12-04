@@ -73,7 +73,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="cpa.php">
               <i class="fas fa-fw fa-chart-area" id="icon_cpa" style="color: ;"></i>
-              <span id="name_cpa" style="color: ;">Customer Profiling Analysis</span>
+              <span id="name_cpa" style="color: ;">Customer Profitability Analysis</span>
             </a>
             <a class="collapse-item" href="behavior.php">
               <i class="fas fa-fw fa-chart-area" id="icon_bs" style="color: ;"></i>
@@ -82,6 +82,10 @@
             <a class="collapse-item" href="cermati.php">
               <i class="fas fa-fw fa-chart-area" id="icon_cs" style="color: ;"></i>
               <span id="name_cs" style="color: ;">Credit Risk Scoring</span>
+            </a>
+            <a class="collapse-item" href="branch.php">
+              <i class="fas fa-fw fa-map" id="icon_br" style="color: ;"></i>
+              <span id="name_br" style="color: ;">Branch Efficiency</span>
             </a>
           </div>
         </div>

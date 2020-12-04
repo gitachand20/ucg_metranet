@@ -23,7 +23,7 @@
 			</div>
 
 			<div role="tabpanel" class="tab-pane" id="segmentation">
-				<div class="row" style="margin-top: 20px;">
+				<!-- <div class="row" style="margin-top: 20px;">
 					<div class="col-7" ></div>
 					<div class="col-5" >
 						<div class="form-group row">
@@ -57,17 +57,17 @@
 							<div class="col-4">
 								<select class="form-control" name="filter_period" id="filter_period">
 									<option value="">Periode</option>
-									<option value="3">3-Months</option>
-									<option value="6">6-Months</option>
-									<option value="9">9-Months</option>
-									<option value="12">12-Months</option>
+									<option value="2">3-Months</option>
+									<option value="5">6-Months</option>
+									<option value="8">9-Months</option>
+									<option value="11">12-Months</option>
 								</select>
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> -->
 
-				<div class="row mb-4">
+				<div class="row mb-4" style="margin-top: 20px;">
 					<div class="col-6">
 						<div class="card">
 							<div class="card-header">
@@ -134,7 +134,7 @@
 								</div>
 							</div>
 							<div class="card-body">
-								<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/ef958fd7-fc96-4cba-92cd-c1227728a745" frameborder="0" width="100%" height="350" allowtransparency></iframe>
+								<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/22f4826b-1fc5-41b6-998d-4c14e00561ec" frameborder="0" width="100%" height="350" allowtransparency></iframe>
 							</div>
 						</div>
 					</div>
@@ -282,18 +282,15 @@
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header" style="background-color: #FFA07A;">
-					<div class="tooltip1">
-						<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Debitur Berdasarkan Jenis Pinjaman</h5>
-						<span class="tooltiptext1">
-							Grafik ini menampilkan total debitur berdasarkan jenis pinjaman.
-						</span>
-					</div>
+					<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Debitur Berdasarkan Jenis Pinjaman</h5>
 					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
 				</div>
 				<div class="modal-body">
 					<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/c0e3569d-a58f-4c0d-b4a3-0e76d2b70976" frameborder="0" width="100%" height="350" allowtransparenc></iframe>
+					<hr>
+					Grafik ini menampilkan total debitur berdasarkan jenis pinjaman.
 					<hr>
 					<b>Diskripsi</b>
 					<ul style="list-style-position: outside;">
@@ -310,18 +307,15 @@
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header" style="background-color: #FFA07A;">
-					<div class="tooltip1">
-						<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Debitur Berdasarkan Gender</h5>
-						<span class="tooltiptext1">
-							Grafik ini  menampilkan jumlah debitur berdasarkan gender (laki-laki atau perempuan).
-						</span>
-					</div>
+					<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Debitur Berdasarkan Gender</h5>
 					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
 				</div>
 				<div class="modal-body">
 					<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/bb149759-b61d-4ad9-b948-ee43334c10c3" frameborder="0" width="100%" height="350" allowtransparenc></iframe>
+					<hr>
+					Grafik ini  menampilkan jumlah debitur berdasarkan gender (laki-laki atau perempuan).
 					<hr>
 					<b>Diskripsi</b>
 					<ul style="list-style-position: outside;">
@@ -338,49 +332,15 @@
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header" style="background-color: #FFA07A;">
-					<div class="tooltip1">
-						<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Debitur Berdasarkan Status Keluarga</h5>
-						<span class="tooltiptext1">
-							Grafik ini menampilkan total nasabah berdasarkan segmentasi status keluarga.
-						</span>
-					</div>
+					<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Debitur Berdasarkan Status Keluarga</h5>
 					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
 				</div>
 				<div class="modal-body">
-					<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/ef958fd7-fc96-4cba-92cd-c1227728a745" frameborder="0" width="100%" height="350" allowtransparency></iframe>
+					<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/22f4826b-1fc5-41b6-998d-4c14e00561ec" frameborder="0" width="100%" height="350" allowtransparency></iframe>
 					<hr>
-					<b>Diskripsi</b>
-					<ul style="list-style-position: outside;">
-						<li>Civil marriage : Pernikahan sipil.</li>
-						<li>Married : Menikah.</li>
-						<li>Separated : Bercerai.</li>
-						<li>Single / not married : Lajang.</li>
-						<li>Widow : Janda/Duda.</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Debitur Berdasarkan Status Keluarga -->
-	<div class="modal fade bd-example-modal-lg" id="pie3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg" role="document">
-			<div class="modal-content">
-				<div class="modal-header" style="background-color: #FFA07A;">
-					<div class="tooltip1">
-						<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Debitur Berdasarkan Status Keluarga</h5>
-						<span class="tooltiptext1">
-							Grafik ini menampilkan total nasabah berdasarkan segmentasi status keluarga.
-						</span>
-					</div>
-					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">×</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/ef958fd7-fc96-4cba-92cd-c1227728a745" frameborder="0" width="100%" height="350" allowtransparency></iframe>
+					Grafik ini menampilkan total nasabah berdasarkan segmentasi status keluarga.
 					<hr>
 					<b>Diskripsi</b>
 					<ul style="list-style-position: outside;">
@@ -400,18 +360,15 @@
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header" style="background-color: #FFA07A;">
-					<div class="tooltip1">
-						<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Debitur Berdasarkan Tempat Tinggal</h5>
-						<span class="tooltiptext1">
-							Grafik ini menampilkan total debitur berdasarkan tempat tinggal.
-						</span>
-					</div>
+					<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Debitur Berdasarkan Tempat Tinggal</h5>
 					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
 				</div>
 				<div class="modal-body">
 					<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/e750f48c-ed8c-4209-b45e-760e4f1706f3" frameborder="0" width="100%" height="350" allowtransparency></iframe>
+					<hr>
+					Grafik ini menampilkan total debitur berdasarkan tempat tinggal.
 					<hr>
 					<b>Diskripsi</b>
 					<ul style="list-style-position: outside;">
@@ -431,18 +388,15 @@
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header" style="background-color: #FFA07A;">
-					<div class="tooltip1">
-						<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Debitur Berdasarkan Tingkat Pendidikan</h5>
-						<span class="tooltiptext1">
-							Grafik ini menampilkan jumlah debitur berdasarkan segmentasi tingkat pendidikan.
-						</span>
-					</div>
+					<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Debitur Berdasarkan Tingkat Pendidikan</h5>
 					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
 				</div>
 				<div class="modal-body">
 					<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/14a95b9f-22f3-4346-8ee8-16d4506b7d6b" frameborder="0" width="100%" height="350"    allowtransparency></iframe>
+					<hr>
+					Grafik ini menampilkan jumlah debitur berdasarkan segmentasi tingkat pendidikan.
 					<hr>
 					<b>Diskripsi</b>
 					<ul style="list-style-position: outside;">
@@ -461,18 +415,15 @@
 		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header" style="background-color: #FFA07A;">
-					<div class="tooltip1">
-						<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Debitur Berdasarkan Kategori Pendapatan</h5>
-						<span class="tooltiptext1">
-							Grafik ini menampilkan total debitur berdasarkan kategori pendapatan.
-						</span>
-					</div>
+					<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Debitur Berdasarkan Kategori Pendapatan</h5>
 					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
 				</div>
 				<div class="modal-body">
 					<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/2c89929e-b48c-4850-945e-27b8d7ee50ab" frameborder="0" width="100%" height="350" allowtransparency></iframe>
+					<hr>
+					Grafik ini menampilkan total debitur berdasarkan kategori pendapatan.
 					<hr>
 					<b>Diskripsi</b>
 					<ul style="list-style-position: outside;">

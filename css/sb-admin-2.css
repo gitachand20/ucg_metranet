@@ -4524,6 +4524,13 @@ input[type="button"].btn-block {
   border-bottom: 1px solid #e3e6f0;
 }
 
+.card-header1 {
+  padding: 0.2rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #f8f9fc;
+  border-bottom: 1px solid #e3e6f0;
+}
+
 .card-header:first-child {
   border-radius: calc(0.35rem - 1px) calc(0.35rem - 1px) 0 0;
 }
@@ -5813,6 +5820,15 @@ a.close.disabled {
   .modal-lg,
   .modal-xl {
     max-width: 800px;
+  }
+}
+
+@media (min-width: 992px) {
+  .modal-lg1,
+  .modal-xl {
+    max-width: 800px;
+    width: 900px;
+    margin-top: 200px;
   }
 }
 
@@ -11217,6 +11233,12 @@ body.sidebar-toggled footer.sticky-footer {
 
 
 
+.card-body1 {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1rem;
+}
+
 .tooltip1 {
   position: relative;
   display: inline-block;
@@ -11316,4 +11338,21 @@ body.sidebar-toggled footer.sticky-footer {
 .form-group1 {
   margin-bottom: 0rem;
   align-content: center;
+}
+
+.border-right {
+  border-right: 0.25rem solid #000000 !important;
+  padding-left: 1em;
+}
+
+.btn-lihat {
+  color: #858796;
+  background-color: transparent;
+}
+
+.btn-lihat:hover {
+  color: #fff;
+  font-weight: bold;
+  background-color: #F4A460;
+  border-color: #D2691E;
 }

@@ -1,8 +1,8 @@
 <?php include "header.php"; ?>
 	
-	<div class="d-sm-flex align-items-center justify-content-between mb-4">
+	<!-- <div class="d-sm-flex align-items-center justify-content-between mb-4">
 		<h1 class="h3 mb-0 text-gray-800">Customer Profiling Analysis</h1>
-	</div>
+	</div> -->
 
 	<div class="col-12">
 		<ul class="nav nav-tabs" role="tablist">

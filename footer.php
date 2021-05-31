@@ -46,7 +46,7 @@
     </div>
   </div>
 
-  <!-- Form Input Modal -->
+  <!-- Modal Form Input -->
   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -55,36 +55,69 @@
     </div>
   </div>
 
+  <!-- Modal Detail Data -->
+  <div class="modal fade" id="detail-data" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <?php include "detail-data.php"; ?>
+      </div>
+    </div>
+  </div>
+
   <div class="modal fade" id="hasilPrediksi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" style="font-weight: bold;">HASIL PREDIKSI</h3>
-          <a href="hasil_prediksi.php" class="close">
-            <span aria-hidden="true">×</span>
-          </a>
-        </div>
+      <div class="modal-content" style="border-radius: 27px;">
         <div class="modal-body">
-          <table style="width: 100%;">
-            <tr>
-              <td style="font-weight: bold; width: 40%;">DEFAULT PROBABILITY</td>
-              <td style="width: 5%;">:</td>
-              <td>______________</td>
-            </tr>
-            <tr>
-              <td style="font-weight: bold;">PREDICTION</td>
-              <td>:</td>
-              <td>______________</td>
-            </tr>
-            <tr>
-              <td style="font-weight: bold;">PREDICTION LEVEL</td>
-              <td>:</td>
-              <td>______________</td>
-            </tr>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          <center>
+            <img src="img/success.gif" width=80><br><br>
+            <span style="font-size: 2rem; font-weight: bold; color: #000;">Pengajuan Kredit Berhasil</span><br>
+          </center>
+          
+          <hr style="border-top: 1px solid #D8D8D8;">
+
+          <table style="width: 100%; margin-bottom: 20px;">
+            <thead style="text-align: center; font-size: 1.2rem;">
+              <tr>
+                <th colspan="3" style="color: #000;">Hasil Prediksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table-cus" style="width: 45%;">Recommendation</td>
+                <td class="table-cus-1" style="font-weight: bold; width: 5%;">:</td>
+                <td class="table-cus-1"> 
+                  <span class="accept-debitur">Accept</span>
+                  <!-- <span class="reject-debitur">Reject</span> -->
+                </td>
+              </tr>
+              <tr>
+                <td class="table-cus">Risk Level</td>
+                <td class="table-cus-1">:</td>
+                <td class="table-cus-1">
+                  <!-- <span class="risk-low">Low</span> -->
+                  <span class="risk-medium">Medium</span>
+                  <!-- <span class="risk-high">High</span> -->
+                </td>
+              </tr>
+              <tr>
+                <td class="table-cus">Prediction</td>
+                <td class="table-cus-1">:</td>
+                <td class="table-cus-1" style="font-weight: bold; color: #000;">Default / Non-Default</td>
+              </tr>
+              <tr>
+                <td class="table-cus">Default Probability</td>
+                <td class="table-cus-1">:</td>
+                <td class="table-cus-1" style="font-weight: bold; color: #000;">0</td>
+              </tr>
+            </tbody>
           </table>
-        </div>
-        <div class="modal-footer">
-          <a class="btn btn-primary" href="hasil_prediksi.php">OK</a>
+          <br>
+          <center>
+            <button class="btn btn-primary" type="button" data-dismiss="modal" style="width: 5em;">OK</button>
+          </center>
         </div>
       </div>
     </div>
@@ -98,7 +131,7 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="js/sb-admin-2.js"></script>
 
   <!-- Page level plugins -->
   <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
@@ -110,8 +143,8 @@
   <!-- Vendor JS-->
   <!-- <script src="vendor/select2/select2.min.js"></script> -->
   <!-- <script src="vendor/datepicker/moment.min.js"></script> -->
-  <!-- <script src="vendor/datepicker/daterangepicker.js"></script> -->
-  
+  <script src="vendor/datepicker/daterangepicker.js"></script>
+
   <script src="js/validasi.js"></script>
 
   <script src="js/global.js"></script>
@@ -124,15 +157,173 @@
 
   <script src="vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <script src="vendor/datatables/dataTables.fixedColumns.js"></script>
+  <script src="vendor/selectpicker/bootstrap-multiselect.js"></script>
+  <!-- <script src="vendor/selectpicker/bootstrap-select.js"></script> -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
 
   <script src="js/demo/datatables-demo.js"></script>
+  <script src="js/filter.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script> -->
+  <script src="vendor/handlebars/handlebars-v4.7.6.js"></script>
 
   <script type="text/javascript">
     // $('#organization_type').select2();
-    $(document).ready(function () {
-      $( "#day_age" ).datepicker({
-        dateFormat: "yyyy/mm/dd"
-      }); 
+    // $(document).ready(function() {
+    //   $('#search_by_branch').select2();
+    // });
+
+    // $('#search_by_branch').selectpicker();
+
+    $(function () {
+      $("#dataTableId").DataTable({        
+        "language": {
+          "sProcessing":   "Sedang memproses...",
+          "sLengthMenu":   "Tampilkan _MENU_ entri",
+          "sZeroRecords":  "Tidak ditemukan data yang sesuai",
+          "sInfo":         "Menampilkan _START_ sampai _END_ dari _TOTAL_ entri",
+          "sInfoEmpty":    "Menampilkan 0 sampai 0 dari 0 entri",
+          "sInfoFiltered": "(disaring dari _MAX_ entri keseluruhan)",
+          "sInfoPostFix":  "",
+          "sSearch":       "Cari:",
+          "sUrl":          "",
+          "oPaginate": {
+            "sFirst":    "Pertama",
+            "sPrevious": "Sebelumnya",
+            "sNext":     "Selanjutnya",
+            "sLast":     "Terakhir"
+          },
+          "sEmptyTable": "Tidak ada data di database"
+        }
+      });
+    });
+
+    $(".datepicker").datepicker({
+      uiLibrary: "bootstrap4",
+      format: "mm/dd/yyyy",
+      todayHighlight: true
+    });
+
+    $(".datepicker").datepicker("setEndDate", new Date());
+
+    $(".datepicker1").datepicker({
+      uiLibrary: "bootstrap4",
+      format: "mmm/dd/yyyy",
+      startDate: "-66y",
+      endDate: "-21y"
+    });
+
+    $(".datepicker2").datepicker({
+      uiLibrary: "bootstrap4",
+      format: "mm/dd/yyyy",
+      todayHighlight: true
+    });
+
+    $("#tanggal_awal").datepicker("setEndDate", new Date());
+
+    function selanjutnya() {
+      document.querySelector("#page2").classList.add("active");
+      document.querySelector(".f1-progress-line").style.width = "100%";
+      document.getElementById("form-1").style.display = "none";
+      document.getElementById("form-2").style.display = "block";
+    }
+
+    function sebelumnya() {
+      document.querySelector("#page2").classList.remove("active");
+      document.querySelector(".f1-progress-line").style.width = "12.5%";
+      document.getElementById("form-1").style.display = "block";
+      document.getElementById("form-2").style.display = "none";
+    }
+
+    $(document).ready(function(){
+      $(".text_field").bind("change", check_field);
+    });
+
+    function check_field() {
+      var year = $("#year").val();
+      var month = $("#month").val();
+      var education = $("#education").val();
+      var gender = $("input[name=gender]:checked").val();
+      var day_age = $("#day_age").val();
+      var family_status = $("#family_status").val();
+      var organization_type = $("#organization_type").val();
+      var income_type = $("#income_type").val();
+      var last_update = $("#last_update").val();
+      var submission_date = $("#submission_date").val();
+      var housing_type = $("#housing_type").val();
+
+      if (!month) {
+        month = "";
+      }
+
+      if (!education) {
+        education = "";
+      }
+
+      if (!family_status) {
+        family_status = "";
+      }
+
+      if (!organization_type) {
+        organization_type = "";
+      }
+
+      if (!income_type) {
+        income_type = "";
+      }
+
+      if (!housing_type) {
+        housing_type = "";
+      }
+
+      if (year != "" && month != "" && education != "" && gender != "" && day_age != "" && family_status != "" && organization_type != "" && income_type != "" && last_update != "" && submission_date != "" && housing_type != "") {
+        $("#btnNext").removeAttr("disabled");
+      } else {
+        $("#btnNext").attr("disabled", "disabled");
+      }
+    }  
+
+    $(document).ready(function() {
+        $('#prediction_risk_cermati').multiselect({
+          nonSelectedText: 'Risiko Prediksi',
+          allSelectedText: 'Semua dipilih'
+        });
+    });
+
+    $(document).ready(function() {
+        $('#risk_level_cermati').multiselect({
+          nonSelectedText: 'Tingkat Risiko',
+          allSelectedText: 'Semua dipilih'
+        });
+    });
+
+    $(document).ready(function() {
+        $('#prediction_risk_thelris').multiselect({
+          nonSelectedText: 'Risiko Prediksi',
+          allSelectedText: 'Semua dipilih'
+        });
+    });
+
+    $(document).ready(function() {
+        $('#risk_level_thelris').multiselect({
+          nonSelectedText: 'Tingkat Risiko',
+          allSelectedText: 'Semua dipilih'
+        });
+    });
+
+    $(document).ready(function() {
+        $('#prediction_risk_enb').multiselect({
+          nonSelectedText: 'Risiko Prediksi',
+          allSelectedText: 'Semua dipilih'
+        });
+    });
+
+    $(document).ready(function() {
+        $('#risk_level_enb').multiselect({
+          nonSelectedText: 'Tingkat Risiko',
+          allSelectedText: 'Semua dipilih'
+        });
     });
 
     function spinner() {
@@ -151,11 +342,13 @@
         },5000);
       } else {
         $("#load").show();
+        $("#fitur").hide();
         $("#content1").hide();
         $("#content2").hide();
 
         setTimeout(function(){
           $("#load").hide();
+          $("#fitur").show();
           $("#content1").show();
         },5000);
       }

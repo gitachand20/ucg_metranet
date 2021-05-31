@@ -16,13 +16,22 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/sb-admin-2.css" rel="stylesheet">
 
-  <link rel="icon" type="image/png" href="img/metranet.png">
+  <link rel="icon" type="image/png" href="img/telkom.png">
+
+  <style type="text/css">
+    body {
+      background-image: url("img/background.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
+  </style>
 
 </head>
 
-<body class="bg-gradient-primary">
+<body>
 
   <div class="container">
 
@@ -38,23 +47,60 @@
               <div class="col-lg-12">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
-                    <hr>
+                    <!-- <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1> -->
+                    <img src="img/telkom1.png" width="120px" height="60px"><br><br>
+                    <h1 class="h3 font-weight-bold text-gray-900 mb-4">Selamat Datang</h1>
+                    <h1 class="h5 text-gray-900 mb-4">Silakan masuk untuk melanjutkan</h1>
                   </div>
-                  <form class="user" name="form_in" action="home.php" method="post">
+                  <form class="user mb-4" name="form_in" action="home.php" method="post">
                     <div class="form-group">
-                      <input name="email_in" type="email" class="form-control form-control-user" placeholder="Masukkan Alamat Email Anda...">
+                      <!-- <label for="email_in" style="color: #000; font-size: .9rem;">Email</label> -->
+                      <input name="email_in" id="email_in" type="email" class="form-control form-control-user" autocomplete="off" placeholder="Email">
                     </div>
 
                     <div class="form-group">
-                      <input name="pass_in" type="password" class="form-control form-control-user" placeholder="Masukkan Password Anda...">
+                     <!-- <label for="pass_in" style="color: #000; font-size: .9rem;">Kata Sandi</label> -->
+                      <input name="pass_in" id="pass_in" type="password" class="form-control form-control-user" placeholder="Kata Sandi">
                     </div>
 
-                    <input type="submit" class="btn btn-primary btn-user btn-block" name="sign_in" value="Sign In"> 
+                    <input type="submit" class="btn btn-custom btn-user btn-block font-weight-bold" name="sign_in" value="MASUK"> 
                   </form>
-                  <hr>
                   <div class="text-center">
-                    <a class="small" href="register.php">Create an Account!</a>
+                    <h1 class="h6 text-gray-900 mb-4">Belum punya akun ? <a href="register.php" class="link-detail font-weight-bold">Daftar</a></h1>
+                    <hr>
+
+                    <div class="row mb-2">
+                      <div class="col-lg-6">
+                        <a href="kepreg/home.php" class="btn btn-custom btn-user btn-block font-weight-bold">KEPALA REGIONAL</a>
+                      </div>
+
+                      <div class="col-lg-6">
+                        <a href="kepcab/home.php" class="btn btn-custom btn-user btn-block font-weight-bold">KEPALA CABANG</a>
+                      </div>
+                    </div>
+
+                    <div class="row mb-2">
+                      <div class="col-lg-3">
+                        <a href="kepuni/kredit/home.php" class="btn btn-custom btn-user btn-block font-weight-bold">KU Kredit</a>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <a href="kepuni/bisnis/home.php" class="btn btn-custom btn-user btn-block font-weight-bold">KU Bisnis</a>
+                      </div>
+                      <div class="col-lg-3">
+                        <a href="officer/kredit/home.php" class="btn btn-custom btn-user btn-block font-weight-bold">OF Kredit</a>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <a href="officer/bisnis/home.php" class="btn btn-custom btn-user btn-block font-weight-bold">OF Bisnis</a>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <a href="form_debitur/home.php" class="btn btn-custom btn-user btn-block font-weight-bold">FORM INPUT DEBITUR SALES OFFICER</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

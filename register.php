@@ -16,13 +16,22 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/sb-admin-2.css" rel="stylesheet">
 
-  <link rel="icon" type="image/png" href="img/metranet.png">
+  <link rel="icon" type="image/png" href="img/telkom.png">
+
+  <style type="text/css">
+    body {
+      background-image: url("img/background.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
+  </style>
 
 </head>
 
-<body class="bg-gradient-primary">
+<body>
 
   <div class="container">
 
@@ -38,28 +47,32 @@
               <div class="col-lg-12">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
-                    <hr>
+                    <!-- <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                    <hr> -->
+                    <img src="img/telkom1.png" width="120px" height="60px"><br><br>
+                    <h1 class="h3 font-weight-bold text-gray-900 mb-4">Daftar</h1>
+                    <h1 class="h5 text-gray-900 mb-4">Buat akun untuk melanjutkan</h1>
                   </div>
-                  <form class="user" name="form_up" action="home.php" method="post">
+                  <form class="user mb-4" name="form_up" action="home.php" method="post">
                     <div class="form-group">
-                      <input name="user_up" type="text" class="form-control form-control-user" placeholder="Masukkan Username Anda..." required oninvalid="this.setCustomValidity('Username tidak boleh kosong')" oninput="setCustomValidity('')">
+                      <input name="user_up" type="text" class="form-control form-control-user" placeholder="Nama" required oninvalid="this.setCustomValidity('Username tidak boleh kosong')" oninput="setCustomValidity('')">
                     </div>
 
                     <div class="form-group">
-                      <input name="email_up" type="email" class="form-control form-control-user"  placeholder="Masukkan Alamat Email Anda..." required oninvalid="this.setCustomValidity('Alamat Email tidak boleh kosong')" oninput="setCustomValidity('')">
+                      <input name="email_up" type="email" class="form-control form-control-user"  placeholder="Email" required oninvalid="this.setCustomValidity('Alamat Email tidak boleh kosong')" oninput="setCustomValidity('')">
                     </div>
 
                     <div class="form-group">
-                      <input name="pass_up" type="password" class="form-control form-control-user" placeholder="Masukkan Password Anda..." required oninvalid="this.setCustomValidity('Password tidak boleh kosong')" oninput="setCustomValidity('')">
+                      <input name="pass_up" type="password" class="form-control form-control-user" placeholder="Kata Sandi" required oninvalid="this.setCustomValidity('Password tidak boleh kosong')" oninput="setCustomValidity('')">
                     </div>
 
-                    <input type="submit" class="btn btn-primary btn-user btn-block" name="sign_up" value="Sign Up"> 
+                    <input type="submit" class="btn btn-custom btn-user btn-block font-weight-bold" name="sign_up" value="DAFTAR"> 
                   </form>
 
-                  <hr>
+                  <!-- <hr> -->
                   <div class="text-center">
-                    <a class="small" href="index.php">Already have an account? Login!</a>
+                    <!-- <a class="small" href="index.php">Already have an account? Login!</a> -->
+                    <h1 class="h6 text-gray-900 mb-4">Sudah punya akun ? <a href="index.php" class="link-detail font-weight-bold">Masuk</a></h1>
                   </div>
                 </div>
               </div>

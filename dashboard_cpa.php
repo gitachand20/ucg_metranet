@@ -1,9 +1,9 @@
 
 <div class="row mb-4" style="margin-top: 10px;">
-	<div class="col-7" ></div>
-	<div class="col-5" >
+	<div class="col-lg-7 col-xs-12"></div>
+	<div class="col-lg-5 col-xs-12" >
 		<div class="row justify-content-center">
-			<div class="col-4">
+			<div class="col-lg-4 col-sm-4 col-xs-12">
 				<select class="form-control">
 					<option value="">Bulan</option>
 					<option value="1">Januari</option>
@@ -21,7 +21,7 @@
 				</select>
 			</div>
 
-			<div class="col-4">
+			<div class="col-lg-4 col-sm-4 col-xs-12">
 				<select class="form-control">
 					<option value="">Tahun</option>
 					<option value="2018">2018</option>
@@ -30,7 +30,7 @@
 				</select>
 			</div>
 
-			<div class="col-4">
+			<div class="col-lg-4 col-sm-4 col-xs-12">
 				<select class="form-control" name="filter_period" id="filter_period">
 					<option value="">Periode</option>
 					<option value="3">3-Months</option>
@@ -43,41 +43,47 @@
 	</div>
 </div>
 
-<div class="row mb-4">
+<div class="row">
 	<!-- Total Profit Berdasarkan Sumber Profit -->
-	<div class="col-6">
+	<div class="col-lg-6 col-md-12 mb-4">
 		<div class="card">
 			<div class="card-header">
+				<span style="font-weight: bold; color: #000;">
+					Total Profit Berdasarkan Sumber Profit
+				</span>
 				<div class="tooltip1">
-					<span style="font-weight: bold; color: #000;">
-						Total Profit Berdasarkan Sumber Profit
-					</span>
+					<i class="fas fa-info-circle" style="color: #000"></i>
 					<span class="tooltiptext">
 						Grafik ini menampilkan total jumlah profit dalam rupiah yang didapatkan Bank berdasarkan jenis sumber Profit dalam periode waktu yang telah ditentukan di atas.
 					</span>
 				</div>
 			</div>
 			<div class="card-body">
-				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/377caae0-c9c5-4c85-be73-e4cdfec0adbe" width="100%" height="350"></iframe>
+				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/297cb238-2cba-4056-80bb-664ec767d216" width="100%" height="350"></iframe>
 			</div>
 		</div>
 	</div>
 
-	<div class="col-6">
+	<div class="col-lg-6 col-md-12 mb-4">
 		<div id="demo" class="carousel slide" data-ride="carousel">
 			<!-- The slideshow -->
 			<div class="carousel-inner">
 
 				<!-- Nasabah Berdasarkan Profile Customer -->
 				<div class="carousel-item active">
-					<div class="tooltip1">
-						<h5 style="font-weight: bold; color: #fff;">Nasabah Berdasarkan Profile Customer</h5>
-						<span class="tooltiptext">
-							Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Customer Profile dalam periode waktu yang telah ditentukan.
+					<div class="">
+						<span style="font-weight: bold; color: #fff; font-size: 1.1rem; padding-bottom: 5px;">
+							Nasabah Berdasarkan Profile Customer
 						</span>
+						<div class="tooltip1">
+							<i class="fas fa-info-circle" style="color: #fff"></i>
+							<span class="tooltiptext">
+								Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Customer Profile dalam periode waktu yang telah ditentukan.
+							</span>
+						</div>
 					</div>
 					<center>
-						<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/6c14d75f-3ca8-4f1c-ad11-91f11c99f01e" width="100%" height="350" allowtransparency></iframe>
+						<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/598ed3bd-35fa-4146-91ef-b02ba2e454b3" width="100%" height="350"></iframe>
 						<br>
 						<a class="btn btn-danger" href="#" data-toggle="modal" data-target="#pie1">More Detail</a>
 					</center>
@@ -85,14 +91,17 @@
 
 				<!-- Nasabah Berdasarkan Transaksi Customer MTD -->
 				<div class="carousel-item">
+					<span style="font-weight: bold; color: #fff; font-size: 1.1rem; padding-bottom: 5px;">
+						Nasabah Berdasarkan Transaksi Customer MTD
+					</span>
 					<div class="tooltip1">
-						<h5 style="font-weight: bold; color: #fff;">Nasabah Berdasarkan Transaksi Customer MTD</h5>
+						<i class="fas fa-info-circle" style="color: #fff"></i>
 						<span class="tooltiptext">
 							Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Customer Transactions dalam periode waktu yang telah ditentukan.
 						</span>
 					</div>
 					<center>
-						<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/0b71b381-7ba4-4af4-841a-4a24f80b7477" frameborder="0" width="100%" height="350"    allowtransparency></iframe>
+						<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/24cae01c-3526-46de-8a3a-3cb4dbbc7c56" width="100%" height="350"></iframe>
 						<br>
 						<a class="btn btn-danger" href="#" data-toggle="modal" data-target="#pie2">More Detail</a>
 					</center>
@@ -100,14 +109,17 @@
 
 				<!-- Nasabah Berdasarkan Customers Digital Maturity -->
 				<div class="carousel-item">
+					<span style="font-weight: bold; color: #fff; font-size: 1.1rem; padding-bottom: 5px;">
+						Nasabah Berdasarkan Customers Digital Maturity
+					</span>
 					<div class="tooltip1">
-						<h5 style="font-weight: bold; color: #fff;">Nasabah Berdasarkan Customers Digital Maturity</h5>
+						<i class="fas fa-info-circle" style="color: #fff"></i>
 						<span class="tooltiptext">
 							Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Customer Digital Maturity dalam periode waktu yang ditentukan di atas. 
 						</span>
 					</div>
 					<center>
-						<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/53700fd7-c379-468f-92ca-2679cc30b4a9" frameborder="0" width="100%" height="350" allowtransparency></iframe>
+						<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/bb0d6a14-2524-41d8-94a8-3c36f24a4607" width="100%" height="350"></iframe>
 						<br>
 						<a class="btn btn-danger" href="#" data-toggle="modal" data-target="#pie3">More Detail</a>
 					</center>
@@ -115,14 +127,17 @@
 
 				<!-- Nasabah Berdasarkan Profit Bank -->
 				<div class="carousel-item">
+					<span style="font-weight: bold; color: #fff; font-size: 1.1rem; padding-bottom: 5px;">
+						Nasabah Berdasarkan Profit Bank
+					</span>
 					<div class="tooltip1">
-						<h5 style="font-weight: bold; color: #fff;">Nasabah Berdasarkan Profit Bank</h5>
+						<i class="fas fa-info-circle" style="color: #fff"></i>
 						<span class="tooltiptext">
 							Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Bank Profit dalam periode waktu yang telah ditentukan di atas.
 						</span>
 					</div>
 					<center>
-						<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/d784dd2f-ae83-4903-a81f-a6b8c27b820b" frameborder="0" width="100%" height="350" allowtransparency></iframe>
+						<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/42017294-2dba-4c9e-a4cb-7f0f1dfbd38d" width="100%" height="350"></iframe>
 						<br>
 						<a class="btn btn-danger" href="#" data-toggle="modal" data-target="#pie4">More Detail</a>
 					</center>
@@ -141,39 +156,88 @@
 	</div>
 </div>
 
-<div class="row mb-4"> 
-	<div class="col-6">
+<div class="row"> 
+	<div class="col-lg-6 col-md-12 mb-4">
 		<div class="card">
 			<div class="card-header">
+				<span style="font-weight: bold; color: #000;">
+					Ringkasan Jumlah Total Transaksi Berdasarkan Debit dan Kredit
+				</span>
 				<div class="tooltip1">
-					<span style="font-weight: bold; color: #000;">
-						Ringkasan Jumlah Total Transaksi Berdasarkan Debit dan Kredit
-					</span>
+					<i class="fas fa-info-circle" style="color: #000"></i>
 					<span class="tooltiptext">
 						Grafik ini menampilkan jumlah total debit dan krebit dalam bulan yang di tentukan.
 					</span>
 				</div>
 			</div>
 			<div class="card-body">
-				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/e050bd43-ea16-4093-a520-dbadef933e7f" width="100%" height="400"></iframe>
+				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/755d8c87-50f6-49fe-8ef5-49f9aa146159" width="100%" height="400"></iframe>
 			</div>
 		</div>
 	</div>
 
-	<div class="col-6">
+	<div class="col-lg-6 col-md-12 mb-4">
 		<div class="card">
 			<div class="card-header">
+				<span style="font-weight: bold; color: #000;">
+					Ringkasan Frekuensi Transaksi Berdasarkan Debit dan Kredit
+				</span>
 				<div class="tooltip1">
-					<span style="font-weight: bold; color: #000;">
-						Ringkasan Frekuensi Transaksi Berdasarkan Debit dan Kredit
-					</span>
+					<i class="fas fa-info-circle" style="color: #000"></i>
 					<span class="tooltiptext">
 						Grafik ini menampilkan jumlah frekuensi debit dan krebit dalam bulan yang di tentukan.
 					</span>
 				</div>
 			</div>
 			<div class="card-body">
-				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/8703d872-e698-4404-95af-f42ef12f950c" width="100%" height="400"></iframe>
+				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/e92c93f4-53dc-4cd1-8eed-636609dcaa6f" width="100%" height="400"></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row"> 
+	<div class="col-lg-6 col-md-12 mb-4">
+		<div class="card">
+			<div class="card-header">
+				<span style="font-weight: bold; color: #000;">
+					Nasabah berdasarkan Current Value
+				</span>
+				<div class="tooltip1">
+					<i class="fas fa-info-circle" style="color: #000"></i>
+					<span class="tooltiptext">
+						Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Current Value dalam periode waktu yang telah ditentukan.
+					</span>
+				</div>
+			</div>
+			<div class="card-body">
+				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/eb3b1679-90ff-4861-aafd-cc9ae2fb19b3" width="100%" height="400"></iframe>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-6 col-md-12 mb-4">
+		<div class="card">
+			<div class="card-header">
+				<div class="form-group1 row">
+					<div class="col-8">
+						<span style="font-weight: bold; color: #000;">
+							Nasabah berdasarkan Future Value
+						</span>
+						<div class="tooltip1">
+							<i class="fas fa-info-circle" style="color: #000"></i>
+							<span class="tooltiptext">
+								Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Future Value dalam periode waktu yang telah ditentukan.
+							</span>
+						</div>
+					</div>
+					<div class="col-4">
+						<a class="btn1 btn-danger" href="#" data-toggle="modal" data-target="#future_value" style="float: right;">More Detail</a>
+					</div>
+				</div>
+			</div>
+			<div class="card-body">
+				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/210a7ab4-ec90-46cb-aca6-39c984f3b643" width="100%" height="400"></iframe>
 			</div>
 		</div>
 	</div>
@@ -193,11 +257,11 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/6c14d75f-3ca8-4f1c-ad11-91f11c99f01e" width="100%" height="350" allowtransparency></iframe>
+				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/598ed3bd-35fa-4146-91ef-b02ba2e454b3" width="100%" height="350"></iframe>
 				<hr>
 				Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Customer Profile dalam periode waktu yang telah ditentukan.
 				<hr>
-				<b>Diskripsi</b>
+				<b>Deskripsi</b>
 				<ul style="list-style-position: outside;">
 					<li>Financially Dependent : Umur customer kurang dari 18 tahun</li>
 					<li>Young Professional : Umur customer antara 18 - 30 tahun</li>
@@ -221,11 +285,11 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/0b71b381-7ba4-4af4-841a-4a24f80b7477" frameborder="0" width="100%" height="350" allowtransparency></iframe>
+				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/24cae01c-3526-46de-8a3a-3cb4dbbc7c56" width="100%" height="350"></iframe>
 				<hr>
 				Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Customer Transactions dalam periode waktu yang telah ditentukan.
 				<hr>
-				<b>Diskripsi</b>
+				<b>Deskripsi</b>
 				<ul style="list-style-position: outside;">
 					<li>Non Users : Tidak ada transaksi selama periode sekarang maupun sebelumnya.</li>
 					<li>Growers : Ada kenaikan transaksi paling tidak sebesar x% pada periode sekarang dibanding periode sebelumnya.</li>
@@ -248,11 +312,11 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/53700fd7-c379-468f-92ca-2679cc30b4a9" frameborder="0" width="100%" height="350" allowtransparency></iframe>
+				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/bb0d6a14-2524-41d8-94a8-3c36f24a4607" width="100%" height="350"></iframe>
 				<hr>
 				Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Customer Digital Maturity dalam periode waktu yang ditentukan di atas.
 				<hr>
-				<b>Diskripsi</b>
+				<b>Deskripsi</b>
 				<ul style="list-style-position: outside;">
 					<li>Money Hawks : Memanfaatkan semua channel digital dalam kesehariannya.</li>
 					<li>Digital Drifters : Memanfaatkan hampir semua channel digital kecuali dalam pembayaran tagihan.</li>
@@ -276,16 +340,53 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/d784dd2f-ae83-4903-a81f-a6b8c27b820b" frameborder="0" width="100%" height="350" allowtransparency></iframe>
+				<iframe class="d-block w-100" src="http://172.17.62.87:3000/public/question/42017294-2dba-4c9e-a4cb-7f0f1dfbd38d" width="100%" height="350"></iframe>
 				<hr>
 				Grafik ini menampilkan total jumlah Nasabah per tipe segmentasi Bank Profit dalam periode waktu yang telah ditentukan di atas.
 				<hr>
-				<b>Diskripsi</b>
+				<b>Deskripsi</b>
 				<ul style="list-style-position: outside;">
 					<li>Platinum Customers : 25% Nasabah teratas pertama yang paling banyak berkontribusi dalam faktor resensi, transaksi dan moneter (Tidak Bisa Kehilangan).</li>
 					<li>Gold Customers : 25% Nasabah teratas kedua yang berkontribusi dalam faktor resensi, transaksi dan moneter (Loyal/Potensial).</li>
 					<li>Iron Customers : 25% Nasabah teratas ketiga yang berkontribusi dalam faktor resensi, transaksi dan moneter (Menjanjikan).</li>
 					<li>Lead Customers : 25% Nasabah teratas keempat yang berkontribusi dalam faktor resensi, transaksi dan moneter (Butuh Perhatian).</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Nasabah Berdasarkan Future Value -->
+<div class="modal fade" id="future_value" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color: #FFA07A;">
+				<h5 class="modal-title" id="exampleModalLabel" style="font-weight: bold; color: #000;">Nasabah Berdasarkan Future Value</h5>
+				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<b>Deskripsi</b>
+				<table width="100%">
+					<tr>
+						<td valign="top"><i class="fa fa-star fa-sm" style="color: #00cc00;"></i></td>
+						<td>High : Kelompok nasabah dengan future value yang berada pada posisi 30 % teratas</td>
+					</tr>
+					<tr>
+						<td valign="top"><i class="fa fa-star fa-sm" style="color: #F5DA81;"></i></td>
+						<td>Medium : Kelompok nasabah dengan future value berada pada posisi 31% hingga 70 %</td>
+					</tr>
+					<tr>
+						<td valign="top"><i class="fa fa-star fa-sm" style="color: #ff0000;"></i></td>
+						<td>Low : Kelompok nasabah dengan future value berada pada posisi > 70 %</td>
+					</tr>
+				</table>
+				<hr>
+				Faktor - faktor yang mempengaruhi nasabah berdasarkan future value :
+				<ul style="list-style-position: outside;">
+					<li>Sisa umur produktif</li>
+					<li>Customer current value</li>
 				</ul>
 			</div>
 		</div>

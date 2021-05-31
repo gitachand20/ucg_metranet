@@ -1,22 +1,9 @@
-  <style type="text/css">
-    .labelku {
-      font-weight: bold;
-      color: #000;
-    }
-
-    .judul {
-      font-weight: bold;
-      color: #fff;
-      width: 100%;
-      text-align: center;
-    }
-  </style>
 
   <form name="form_input" class="needs-validation" method="POST" action="hasil.php" novalidate>
     <div class="modal-header" style="background-color: #EF7A48;">
       <h3 class="modal-title judul">FORM INPUT DEBITUR</h3>
       <a href="hasil_prediksi.php" class="close">
-        <span aria-hidden="true">×</span>
+        <span aria-hidden="true" style="color: #fff;">×</span>
       </a>
     </div>
     <div class="modal-body" style="background-color: #DCDCDC;">
@@ -24,8 +11,8 @@
         <span style="color: #FF0000; font-weight: bold; font-size: 11pt;">Semua data harus diisi</span>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Nominal Pinjaman</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Nominal Pinjaman</label>
+        <div class="col-lg-8 col-xs-12">
           <input class="form-control" type="text" name="approved_credit" id="approved_credit" onchange="hitung()" required>
           <div class="invalid-feedback">
             Nominal pinjaman tidak boleh kosong.
@@ -33,8 +20,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Precentase Scoring (%)</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Precentase Scoring (%)</label>
+        <div class="col-lg-8 col-xs-12">
           <input class="form-control" type="number" name="ext_score_2" id="ext_score_2" required min="0" step="0.0000000001" max="100" onchange="handleChange(this)">
           <div class="invalid-feedback">
             Presentase scoring tidak boleh kosong.
@@ -42,15 +29,15 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Lama Bekerja</label>
-        <div class="form-group row col-8">
-          <div class="col-6">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Lama Bekerja</label>
+        <div class="form-group row col-lg-8 col-xs-12">
+          <div class="col-lg-6 col-sm-6 col-xs-12">
             <input class="form-control" type="number" name="year" id="year" required placeholder="Tahun" min="2" onchange="tahunKerja(this)">
             <div class="invalid-feedback">
               Tahun lama bekerja tidak boleh kosong.
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-lg-6 col-sm-6 col-xs-12">
             <select class="form-control" name="month" id="month" required>
               <option value="" disabled="disabled" selected="selected">Bulan</option>
               <option value="0">0</option>
@@ -73,8 +60,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Pendidikan</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Pendidikan</label>
+        <div class="col-lg-8 col-xs-12">
           <select class="form-control" name="education" id="education" required>
             <option value="" disabled="disabled" selected="selected">Choose option</option>
             <option value="Higher education">Higher education</option>
@@ -89,8 +76,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Tanggal Lahir</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Tanggal Lahir</label>
+        <div class="col-lg-8 col-xs-12">
           <input class="form-control" type="date" name="day_age" id="day_age" required>
           <div class="invalid-feedback">
             Tanggal lahir tidak boleh kosong.
@@ -98,8 +85,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Jenis Kelamin</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Jenis Kelamin</label>
+        <div class="col-lg-8 col-xs-12">
           <select class="form-control" name="gender" id="gender" required>
             <option value="" disabled="disabled" selected="selected">Choose option</option>
             <option value="F">F</option>
@@ -111,8 +98,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Status Perkawinan</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Status Perkawinan</label>
+        <div class="col-lg-8 col-xs-12">
           <select class="form-control" name="family_status" id="family_status" required>
             <option value="" disabled="disabled" selected="selected">Choose option</option>
             <option value="Married">Married</option>
@@ -127,8 +114,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Jenis Organisasi</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Jenis Organisasi</label>
+        <div class="col-lg-8 col-xs-12">
           <select class="form-control" name="organization_type" id="organization_type" required style="width: 100%;">
             <option value="" disabled="disabled" selected="selected">Choose option</option>
             <option value="Advertising">Advertising</option>
@@ -196,8 +183,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Jenis Pendapatan</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Jenis Pendapatan</label>
+        <div class="col-lg-8 col-xs-12">
           <select class="form-control" name="income_type" id="income_type" required>
             <option value="" disabled="disabled" selected="selected">Choose option</option>
             <option value="Commercial associate">Commercial associate</option>
@@ -214,8 +201,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Tanggal Terakhir Update Id (KTP/SIM/dll)</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Tanggal Terakhir Update Id (KTP/SIM/dll)</label>
+        <div class="col-lg-8 col-xs-12">
           <input class="form-control" type="date" name="last_update" id="last_update" required onchange="cal()">
           <div class="invalid-feedback">
             Tanggal terakhir update Id tidak boleh kosong.
@@ -223,8 +210,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Tanggal Pengajuan</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Tanggal Pengajuan</label>
+        <div class="col-lg-8 col-xs-12">
           <input class="form-control" type="date" name="submission_date" id="submission_date" required onchange="cal()">
           <div class="invalid-feedback">
             Tanggal pengajuan tidak boleh kosong.
@@ -232,8 +219,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Jenis Kontrak</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Jenis Kontrak</label>
+        <div class="col-lg-8 col-xs-12">
           <select class="form-control" name="contract_type" id="contract_type" required>
             <option value="" disabled="disabled" selected="selected">Choose option</option>
             <option value="Cash loans">Cash loans</option>
@@ -245,8 +232,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Pendapatan (Perbulan)</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Pendapatan (Perbulan)</label>
+        <div class="col-lg-8 col-xs-12">
           <input class="form-control" type="text" name="income" id="income" required onchange="cekPendapatan()">
           <div class="invalid-feedback">
             Pendapatan (perbulan) tidak boleh kosong.
@@ -254,8 +241,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Tempat Tinggal Saat Ini</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Tempat Tinggal Saat Ini</label>
+        <div class="col-lg-8 col-xs-12">
           <select class="form-control" name="housing_type" id="housing_type" required>
             <option value="" disabled="disabled" selected="selected">Choose option</option>
             <option value="House / apartment">House / apartment</option>
@@ -271,8 +258,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Tenor</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Tenor</label>
+        <div class="col-lg-8 col-xs-12">
           <!-- <input class="form-control" type="number" name="tenor" id="tenor" onkeyup="hitung()" required min="1"> -->
           <select class="form-control" name="tenor" id="tenor" onchange="hitung()" required>
             <option value="" disabled="disabled" selected="selected">Choose option</option>
@@ -289,14 +276,14 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Prediksi Angsuran</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Prediksi Angsuran</label>
+        <div class="col-lg-8 col-xs-12">
           <input class="form-control" type="text" name="annuity" id="annuity" required readonly>
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Price</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Price</label>
+        <div class="col-lg-8 col-xs-12">
           <input class="form-control" type="text" name="price" id="price" required min="0">
           <div class="invalid-feedback">
             Price tidak boleh kosong.
@@ -304,8 +291,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Tanggal Join di Bank</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Tanggal Join di Bank</label>
+        <div class="col-lg-8 col-xs-12">
           <input class="form-control" type="date" name="register_date" id="register_date" onchange="cal2()" required> 
           <div class="invalid-feedback">
             Tanggal join di bank tidak boleh kosong.
@@ -313,8 +300,8 @@
         </div>
       </div>
       <div class="form-group row">
-        <label class="col-4 col-form-label labelku">Tanggal Pengajuan Pinjaman</label>
-        <div class="col-8">
+        <label class="col-lg-4 col-xs-12 col-form-label labelku">Tanggal Pengajuan Pinjaman</label>
+        <div class="col-lg-8 col-xs-12">
           <input class="form-control" type="date" name="submission_date2" id="submission_date2" onchange="cal2()" required>
           <div class="invalid-feedback">
             Tanggal pengauan pinjaman tidak boleh kosong.
@@ -442,6 +429,8 @@
           title: 'Oops...',
           text: 'Minimal lama bekerja 2 Tahun.'
         })
+        document.getElementById('year').value = '';
+        document.form_input.year.focus();
       }
     }
 

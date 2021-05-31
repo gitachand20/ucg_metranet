@@ -1,0 +1,50 @@
+{
+  "mData": [
+    {
+      "nik": "a",
+      "no_aplikasi": "a",
+      "branch": "a",
+      "jenis_kelamin": "a",
+      "angsuran": "a",
+      "status_kawin": "a",
+      "pendidikan": "a",
+      "admin_fee": "a",
+      "plafond": "a",
+      "penghasilan": "a",
+      "dom_provinsi": "a",
+      "sumber_dana": "a",
+      "pekerjaan": "a",
+      "umur": "a",
+      "tenor": "a",
+      "recommendation": "a",
+      "default_probability": "a",
+      "prediction": "a",
+      "risk_level": "a",
+      "name": "b",
+      "date_input": "a"
+    },
+    {
+      "nik": "b",
+      "no_aplikasi": "b",
+      "branch": "b",
+      "jenis_kelamin": "b",
+      "angsuran": "b",
+      "status_kawin": "b",
+      "pendidikan": "b",
+      "admin_fee": "b",
+      "plafond": "b",
+      "penghasilan": "b",
+      "dom_provinsi": "b",
+      "sumber_dana": "b",
+      "pekerjaan": "b",
+      "umur": "b",
+      "tenor": "b",
+      "recommendation": "b",
+      "default_probability": "b",
+      "prediction": "b",
+      "risk_level": "b",
+      "name": "b",
+      "date_input": "b"
+    }
+  ]
+}

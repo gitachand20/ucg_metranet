@@ -53,4 +53,10 @@
     e.preventDefault();
   });
 
+  $(document).click(function (event) {
+    if (!$(event.target).is('.collapse *')) {
+      $('.collapse').collapse('hide');
+    }
+  });
+
 })(jQuery); // End of use strict
